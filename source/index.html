@@ -4,9 +4,33 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
-
+  <body class="page__body">
+    <header class="page-header">
+      <a href="" class="page-header__logo">
+        <img src="img/logo-mobile.svg" alt="" height="37.61" width="33.32">
+      </a>
+      <a href="" class="page-header__logo">
+        <img src="img/logo-2.svg" alt="" height="18" width="101">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toogle"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="">главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="">каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="">подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1>Функциональное питание для котов</h1>
+    </main>
   </body>
 </html>
