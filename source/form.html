@@ -15,13 +15,13 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
-              <a href="">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="">Каталог продукции</a>
+              <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a href="">Подбор программы</a>
+              <a href="#">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -36,18 +36,18 @@
               <h2 class="visually-hidden">Информация о коте</h2>
               <p class="information__description">Заполните анкету, и мы подберем
                 программу питания для вашего кота</p>
-              <ul class="information__list information-list">
-                <li class="information-item input-name">
-                  <label class="input-name__label" for="input-name">ИМЯ:<span class="input-name__span">*</span></label>
-                  <input class="input-name__input" name="name" id="input-name" type="text">
+              <ul class="information__list">
+                <li class="information__item--name">
+                  <label class="select-program-item__label" for="input-name">ИМЯ:<span class="input-name__span">*</span></label>
+                  <input class="select-program-item__input" name="name" id="input-name" type="text">
                 </li>
-                <li class="information__input input-weight">
-                  <label class="input-weight__label" for="input-weight">Вес (кг):<span class="input-weight__span">*</span></label>
-                  <input class="input-weight__input" name="weight" id="input-weight" type="text">
+                <li class="information__item--weight">
+                  <label class="select-program-item__label" for="input-weight">Вес (кг):<span class="input-weight__span">*</span></label>
+                  <input class="select-program-item__input" name="weight" id="input-weight" type="text">
                 </li>
-                <li class="information__input input-age">
-                  <label class="input-age__label" for="input-age">Возраст (лет):</label>
-                  <input class="input-age__input" name="age" id="input-age" type="text">
+                <li class="information__item--age">
+                  <label class="select-program-item__label" for="input-age">Возраст (лет):</label>
+                  <input class="select-program-item__input" name="age" id="input-age" type="text">
                 </li>
               </ul>
             </div>
@@ -55,34 +55,33 @@
           <fieldset class="questionnaire__fieldset program">
             <div class="program__wrapper">
               <h2 class="visually-hidden">Выбор программы</h2>
-              <ul class="information__list select-program-list">
-                <li class="select-program-item radio-slim">
-                  <input class="radio-slim__input" name="program" value="slim" id="radio-slim" type="radio" checked>
-                  <label class="radio-slim__label" for="radio-slim">похудение</label>
+              <ul class="program__list">
+                <li class="program__item--slim">
+                  <input class="select-program-item__input" name="program" value="slim" id="radio-slim" type="radio" checked>
+                  <label class="select-program-item__label" for="radio-slim">похудение</label>
                 </li>
-                <li class="select-program-item radio-pro">
-                  <input class="radio-pro__input" name="program" value="pro" id="radio-pro" type="radio">
-                  <label class="radio-pro__label" for="radio-pro">Набор массы</label>
+                <li class="program-item--pro">
+                  <input class="select-program-item__input" name="program" value="pro" id="radio-pro" type="radio">
+                  <label class="select-program-item__label" for="radio-pro">Набор массы</label>
                 </li>
-                <li class="select-program-item radio-need-advice">
-                  <input class="radio-need-advice__input" name="program" value="need-advice" id="radio-need-advice" type="radio">
-                  <label class="radio-need-advice__label" for="radio-need-advice">Не знаю (Нужен ваш совет)</label>
+                <li class="program-item--need-advice">
+                  <input class="select-program-item__input" name="program" value="need-advice" id="radio-need-advice" type="radio">
+                  <label class="select-program-item__label" for="radio-need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </div>
           </fieldset>
           <fieldset class="questionnaire__fieldset user-contacts">
             <div class="user-contacts__wrapper">
-              <h2>Контактные данные
-                (владельца кота)</h2>
+              <h2>Контактные данные (владельца кота)</h2>
               <ul class="user-contacts__list">
-                <li class="user-contacts__item input-email">
-                  <label class="input-email__label" for="input-email">E-mail:<span class="input-email__span">*</span></label>
-                  <input class="input-email__input" name="email" id="input-email" type="mail">
+                <li class="user-contacts__item--email">
+                  <label class="select-program-item__label" for="input-email">E-mail:<span class="input-email__span">*</span></label>
+                  <input class="select-program-item__input" name="email" id="input-email" type="mail">
                 </li>
-                <li class="user-contacts__item input-tel">
-                  <label class="input-tel__label" for="input-tel">Телефон:<span class="input-tel__span">*</span></label>
-                  <input class="input-tel__input" name="tel" id="input-tel" type="tel">
+                <li class="user-contacts__item--tel">
+                  <label class="select-program-item__label" for="input-tel">Телефон:<span class="input-tel__span">*</span></label>
+                  <input class="select-program-item__input" name="tel" id="input-tel" type="tel">
                 </li>
               </ul>
             </div>
@@ -97,21 +96,21 @@
             <div class="additionally__wrapper">
               <h2>Дополнительно</h2>
               <ul class="additionally__list">
-                <li class="additionally__item checkbox-sweetener">
-                  <input class="checkbox-sweetener__input" name="checkbox-sweetener" id="checkbox-sweetener" type="checkbox" checked>
-                  <label class="checkbox-sweetener__label" for="checkbox-sweetener">сахарозаменитель</label>
+                <li class="additionally__item--sweetener">
+                  <input class="select-program-item__input" name="checkbox-sweetener" id="checkbox-sweetener" type="checkbox" checked>
+                  <label class="select-program-item__label" for="checkbox-sweetener">сахарозаменитель</label>
                 </li>
-                <li class="additionally__item checkbox-drinking-water">
-                  <input class="checkbox-drinking-water__input" name="checkbox-drinking-water" id="checkbox-drinking-water" type="checkbox">
-                  <label class="checkbox-drinking-water__label" for="checkbox-drinking-water">питьевая вода</label>
+                <li class="additionally__item--drinking-water">
+                  <input class="select-program-item__input" name="checkbox-drinking-water" id="checkbox-drinking-water" type="checkbox">
+                  <label class="select-program-item__label" for="checkbox-drinking-water">питьевая вода</label>
                 </li>
-                <li class="additionally__item checkbox-milk">
-                  <input class="checkbox-milk__input" name="checkbox-milk" id="checkbox-milk" type="checkbox">
-                  <label class="checkbox-milk__label" for="checkbox-milk">молоко</label>
+                <li class="additionally__item--milk">
+                  <input class="select-program-item__input" name="checkbox-milk" id="checkbox-milk" type="checkbox">
+                  <label class="select-program-item__label" for="checkbox-milk">молоко</label>
                 </li>
-                <li class="additionally__item checkbox-vitamins">
-                  <input class="checkbox-vitamins__input" name="checkbox-vitamins" id="checkbox-vitamins" type="checkbox">
-                  <label class="checkbox-vitamins__label" for="checkbox-vitamins">витамины</label>
+                <li class="additionally__item--vitamins">
+                  <input class="select-program-item__input" name="checkbox-vitamins" id="checkbox-vitamins" type="checkbox">
+                  <label class="select-program-item__label" for="checkbox-vitamins">витамины</label>
                 </li>
               </ul>
             </div>
