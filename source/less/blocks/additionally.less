@@ -1,0 +1,47 @@
+.additionally{
+
+}
+.additionally h2{
+  .font(normal;);
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 34px;
+}
+.additionally__list{
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+.additionally__item{
+  margin-bottom: 13px;
+  margin-left: 30px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.additionally__label{
+  position: relative;
+  margin-left: 16px;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -45px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+  }
+}
+.additionally__input:checked + label::after{
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -39px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../img/positive-checkbox.svg");
+  background-repeat: no-repeat;
+}
