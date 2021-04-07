@@ -68,6 +68,7 @@
           </fieldset>
           <fieldset class="questionnaire__fieldset user-contacts">
             <h2>Контактные данные (владельца кота)</h2>
+            <hr class="user-contacts__hr">
             <ul class="user-contacts__list">
               <li class="user-contacts__item user-contacts__item--email">
                 <label class="user-contacts__label select-program-label" for="input-email">E-mail:<span class="user-contacts__span">*</span></label>
@@ -81,30 +82,30 @@
           </fieldset>
           <fieldset class="questionnaire__fieldset comment">
             <h2>Комментарий</h2>
+            <hr class="comment__hr">
             <textarea class="comment__textarea select-program-input" name="comment" id="comment__textarea" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
           <fieldset class="questionnaire__fieldset additionally">
-            <div class="additionally__wrapper">
-              <h2>Дополнительно</h2>
-              <ul class="additionally__list">
-                <li class="additionally__item">
-                  <input class="additionally__input visually-hidden" name="checkbox-sweetener" id="checkbox-sweetener" type="checkbox" checked>
-                  <label class="additionally__label select-program-label" for="checkbox-sweetener">сахарозаменитель</label>
-                </li>
-                <li class="additionally__item">
-                  <input class="additionally__input visually-hidden" name="checkbox-drinking-water" id="checkbox-drinking-water" type="checkbox">
-                  <label class="additionally__label select-program-label" for="checkbox-drinking-water">питьевая вода</label>
-                </li>
-                <li class="additionally__item">
-                  <input class="additionally__input visually-hidden" name="checkbox-milk" id="checkbox-milk" type="checkbox">
-                  <label class="additionally__label select-program-label" for="checkbox-milk">молоко</label>
-                </li>
-                <li class="additionally__item">
-                  <input class="additionally__input visually-hidden" name="checkbox-vitamins" id="checkbox-vitamins" type="checkbox">
-                  <label class="additionally__label select-program-label" for="checkbox-vitamins">витамины</label>
-                </li>
-              </ul>
-            </div>
+            <h2>Дополнительно</h2>
+            <hr class="additionally__hr">
+            <ul class="additionally__list">
+              <li class="additionally__item">
+                <input class="additionally__input visually-hidden" name="checkbox-sweetener" id="checkbox-sweetener" type="checkbox" checked>
+                <label class="additionally__label select-program-label" for="checkbox-sweetener">сахарозаменитель</label>
+              </li>
+              <li class="additionally__item">
+                <input class="additionally__input visually-hidden" name="checkbox-drinking-water" id="checkbox-drinking-water" type="checkbox">
+                <label class="additionally__label select-program-label" for="checkbox-drinking-water">питьевая вода</label>
+              </li>
+              <li class="additionally__item">
+                <input class="additionally__input visually-hidden" name="checkbox-milk" id="checkbox-milk" type="checkbox">
+                <label class="additionally__label select-program-label" for="checkbox-milk">молоко</label>
+              </li>
+              <li class="additionally__item">
+                <input class="additionally__input visually-hidden" name="checkbox-vitamins" id="checkbox-vitamins" type="checkbox">
+                <label class="additionally__label select-program-label" for="checkbox-vitamins">витамины</label>
+              </li>
+            </ul>
           </fieldset>
           <button class="questionnaire__button" type="submit">отправить заявку</button>
         </form>
