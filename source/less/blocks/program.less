@@ -1,18 +1,20 @@
-.program{
+.program {
   margin-top: 22px;
 }
-.program__list{
+
+.program__list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.program__item{
+
+.program__item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  background: #F2F2F2;
+  background: #f2f2f2;
   margin-left: 20px;
   margin-right: 20px;
   padding-left: 20px;
@@ -22,10 +24,12 @@
   margin-bottom: 20px;
   max-height: 266px;
 }
-.program__image{
+
+.program__image {
   margin-right: 20px;
 }
-.program__name{
+
+.program__name {
   position: relative;
   .font(normal;);
   text-transform: uppercase;
@@ -33,28 +37,31 @@
   line-height: 37px;
   margin: 0;
 }
-.program__description{
+
+.program__description {
   font-size: 14px;
   line-height: 18px;
   max-width: 240px;
   min-height: 112px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid #d9d9d9;
   margin: 0;
   margin-top: 22px;
   margin-bottom: 19px;
   color: @special-dark-grey;
 }
-.program__link{
+
+.program__link {
   position: relative;
   text-transform: uppercase;
   color: @black;
   text-decoration: none;
   font-size: 16px;
   line-height: 16px;
-  &::before{
+
+  &::before {
     content: "";
     position: absolute;
-    background-image: url(../img/arrow-program.svg);
+    background-image: url("../img/arrow-program.svg");
     background-repeat: no-repeat;
     width: 24px;
     height: 12px;

@@ -1,4 +1,4 @@
-.additionally{
+.additionally {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -7,7 +7,8 @@
   padding-left: 20px;
   max-width: 320px - 20px;
 }
-.additionally h2{
+
+.additionally h2 {
   .font(normal;);
   font-size: 24px;
   line-height: 26px;
@@ -15,32 +16,38 @@
   margin-bottom: 34px;
   width: 163px;
 }
-.additionally__hr{
+
+.additionally__hr {
   display: inline-block;
   width: 10px;
   margin: 0;
   flex-grow: 1;
   height: 2px;
-  background-color: #68B738;
+  background-color: #68b738;
   border: none;
   margin-top: 18px;
 }
-.additionally__list{
+
+.additionally__list {
   list-style: none;
-  margin:0;
+  margin: 0;
   padding: 0;
 }
-.additionally__item{
+
+.additionally__item {
   margin-bottom: 13px;
   margin-left: 30px;
-  &:last-child{
+
+  &:last-child {
     margin-bottom: 0;
   }
 }
-.additionally__label{
+
+.additionally__label {
   position: relative;
   margin-left: 16px;
-  &::before{
+
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -48,11 +55,12 @@
     left: -45px;
     width: 30px;
     height: 30px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #cdcdcd;
     box-sizing: border-box;
   }
 }
-.additionally__input:checked + label::after{
+
+.additionally__input:checked + label::after {
   content: "";
   position: absolute;
   top: 5px;
