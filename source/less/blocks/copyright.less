@@ -1,6 +1,10 @@
 .copyright {
   height: 80px;
   width: 100%;
+
+  @media (min-width: 768px) {
+    width: max-content;
+  }
 }
 
 .copyright__link {
@@ -11,10 +15,19 @@
   text-decoration: none;
   height: 100%;
   color: @special-dark-grey;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
 }
 
 .copyright__text {
   margin: 0;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+    margin-right: 22px;
+  }
 }

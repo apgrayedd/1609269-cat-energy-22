@@ -1,12 +1,27 @@
 .example {
-  width: auto;
-  max-width: 280px;
+  position: relative;
   background-color: #eaeaea;
   margin-top: 42px;
   padding-top: 27px;
   padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
+  z-index: -2;
+
+  @media (min-width: 768px) {
+    background-color: @white;
+    padding-top: 64px;
+    margin-top: 0;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 462px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #EAEAEA;
+      z-index: -1;
+    }
+  }
 }
 
 .example h2 {
@@ -15,6 +30,12 @@
   line-height: 40px;
   margin: 0;
   margin-bottom: 33px;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
 }
 
 .example__history {
@@ -22,21 +43,38 @@
   line-height: 18px;
   margin: 0;
   color: @special-dark-grey;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__result-list {
   display: flex;
   justify-content: space-between;
   margin-top: 26px;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    margin-top: 54px;
+    display: inline-block;
+  }
 }
 
 .example__result-item {
+  display: inline-block;
   border: 1px solid #cdcdcd;
   border-radius: 5px;
   width: 124px;
   padding-top: 15px;
   position: relative;
   margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-right: 42px;
+    width: 162px;
+  }
 }
 
 .example__result-day,
@@ -46,6 +84,11 @@
   white-space: nowrap;
   text-align: center;
   margin-bottom: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__result-description {
@@ -60,6 +103,19 @@
   bottom: -15px;
   background-color: #eaeaea;
   color: @special-dark-grey;
+
+  @media (min-width: 768px) {
+    background-color: @white;
+    font-size: 14px;
+    line-height: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: max-content;
+  }
 }
 
 .example__expenses {
@@ -68,6 +124,14 @@
   text-align: center;
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    text-align: right;
+    width: auto;
+    float: right;
+    margin-top: 54px;
+  }
 }
 
 .example__slider {
@@ -79,4 +143,9 @@
 .example__img-mobile {
   margin-top: 42px;
   margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    width: 708px;
+    height: 620px;
+  }
 }
