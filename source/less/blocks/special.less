@@ -2,6 +2,12 @@
   @media (min-width: 768px) {
     border-bottom: 1px solid #e6e6e6;
   }
+
+  @media (min-width: 1440px) {
+    width: 1220px;
+    padding: 0 110px;
+    border: none;
+  }
 }
 
 .special h2 {
@@ -16,6 +22,10 @@
     line-height: 60px;
     padding-left: 30px;
   }
+
+  @media (min-width: 1440px) {
+    padding-left: 0;
+  }
 }
 
 .special__list {
@@ -27,6 +37,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 30px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0;
   }
 }
 
@@ -48,6 +62,18 @@
       margin-left: 153px;
     }
   }
+
+  @media (min-width: 1440px) {
+    margin-right: 94px;
+
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+}
 }
 
 .special__number {

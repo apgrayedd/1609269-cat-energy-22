@@ -4,7 +4,7 @@
   background-color: @white;
   list-style: none;
   height: 198px;
-  z-index: 1;
+  z-index: 2;
 
   &:hover {
     display: flex;
@@ -24,6 +24,10 @@
 .site-list__item a {
   color: @black;
   text-decoration: none;
+
+  @media (min-width: 1440px) {
+    color: @white;
+  }
 }
 
 .site-list__item {
@@ -56,7 +60,11 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        border: 2px solid #68B738;
+        border: 1px solid #68B738;
+
+        @media (min-width: 1440px) {
+          border: 1px solid #FFFFFF;
+        }
       }
     }
   }
