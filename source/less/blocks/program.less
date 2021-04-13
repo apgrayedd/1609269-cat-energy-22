@@ -3,9 +3,17 @@
 }
 
 .program__list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
 }
 
 .program__item {
@@ -15,18 +23,69 @@
   justify-content: start;
   align-items: center;
   background: #f2f2f2;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 18px;
-  margin-bottom: 20px;
+  padding: 20px 20px 18px 20px;
   max-height: 266px;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 77px 28px 53px 52px;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    align-items: center;
+    width: 467px;
+    padding: 41px 51px 55px 52px;
+    margin-right: 80px;
+    margin-bottom: 0;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
 }
 
 .program__image {
+  display: block;
   margin-right: 20px;
+
+  &--slim {
+    @media (min-width: 768px) {
+      width: 200px;
+      height: 211px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 100px;
+      height: 106px;
+    }
+  }
+
+  &--pro {
+    @media (min-width: 768px) {
+      width: 268px;
+      height: 200px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 134px;
+      height: 100px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    order: 1;
+    margin-right: 0;
+  }
+
+  @media (min-width: 1440px) {
+    order: 0;
+    margin-bottom: 39px;
+    margin-right: 62px;
+  }
 }
 
 .program__name {
@@ -36,18 +95,39 @@
   font-size: 24px;
   line-height: 37px;
   margin: 0;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
 }
 
 .program__description {
   font-size: 14px;
   line-height: 18px;
   max-width: 240px;
-  min-height: 112px;
   border-bottom: 1px solid #d9d9d9;
   margin: 0;
   margin-top: 22px;
   margin-bottom: 19px;
+  padding-bottom: 23px;
   color: @special-dark-grey;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    margin-bottom: 48px;
+    max-width: 350px;
+    padding: 0;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 470px;
+    margin-bottom: 23px;
+    margin-top: 0;
+  }
 }
 
 .program__link {
@@ -67,5 +147,14 @@
     height: 12px;
     top: 2px;
     right: -40px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      top: 10px;
+    }
   }
 }

@@ -3,3 +3,30 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.page-header__link--logo-text,
+.page-header__link--logo-mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.page-header__link--logo-tablet {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.page-header__link--logo-desktop {
+  display: none;
+
+  @media (min-width: 1440px) {
+    display: block;
+  }
+}

@@ -6,6 +6,32 @@
   background-repeat: no-repeat;
   padding-top: 11px;
   z-index: 0;
+
+  @media (min-width: 768px) {
+    background-image: none;
+    color: @black;
+  }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px;
+    padding-top: 111px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 694px;
+      width: 720px;
+      right: -15px;
+      bottom: 65px;
+      background-image: url("../img/promo-bg-image-mobile.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -5;
+    }
+  }
 }
 
 .promo h2 {
@@ -19,6 +45,15 @@
   margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: 768px) {
+    margin-left: 87px;
+    text-align: start;
+    margin-bottom: 41px;
+    font-size: 60px;
+    line-height: 60px;
+    max-width: 420px;
+  }
 }
 
 .promo__slogan {
@@ -28,27 +63,63 @@
   line-height: 14px;
   text-transform: uppercase;
   margin-bottom: 29px;
+
+  @media (min-width: 768px) {
+    margin-left: 87px;
+    text-align: start;
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .promo__img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 200px;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: 1440px) {
+    top: 70px;
+    left: 600px;
+    width: 552px;
+    height: 499px;
+  }
 }
 
 .promo__button {
   color: @white;
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   width: 280px;
+  height: 40px;
   background-color: #68b738;
   text-decoration: none;
-  padding-top: 11px;
-  padding-bottom: 11px;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
   margin-top: 4px;
+
+  @media (min-width: 768px) {
+    margin-left: 87px;
+    margin-bottom: 526px;
+    width: 244px;
+    height: 54px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 185px;
+  }
 }

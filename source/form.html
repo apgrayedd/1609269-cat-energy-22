@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
-    <header class="page-header">
+    <header class="page-header wrapper--with-padd">
       <div class="page-header__wrapper">
         <a href="index.html" class="page-header__link page-header__link--logo-mobile">
           <img class="logo__logo-mobile" src="img/logo-mobile.svg" alt="Логотип 'CAT ENERGY'" height="37" width="33">
@@ -31,11 +31,11 @@
         </nav>
       </div>
     </header>
-    <main class="page-main wrapper-mobile">
+    <main class="page-main wrapper">
       <h1 class="page-main__h2 page-main__h2--form">Подбор программы</h1>
       <section class="questionnaire">
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="questionnaire__fieldset information">
+          <fieldset class="questionnaire__fieldset information  wrapper--with-padd">
             <h2 class="visually-hidden">Информация о коте</h2>
             <p class="information__description">Заполните анкету, и мы подберем
               программу питания для вашего кота</p>
@@ -54,7 +54,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="questionnaire__fieldset program-form">
+          <fieldset class="questionnaire__fieldset program-form wrapper--with-padd">
             <h2 class="visually-hidden">Выбор программы</h2>
             <ul class="program-form__list">
               <li class="program-form__item">
@@ -71,7 +71,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="questionnaire__fieldset user-contacts">
+          <fieldset class="questionnaire__fieldset user-contacts wrapper">
             <h2>Контактные данные (владельца кота)</h2>
             <hr class="user-contacts__hr">
             <ul class="user-contacts__list">
@@ -85,12 +85,12 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="questionnaire__fieldset comment">
+          <fieldset class="questionnaire__fieldset comment wrapper">
             <h2>Комментарий</h2>
             <hr class="comment__hr">
             <textarea class="comment__textarea select-program-input" name="comment" id="comment__textarea" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
-          <fieldset class="questionnaire__fieldset additionally">
+          <fieldset class="questionnaire__fieldset additionally wrapper">
             <h2>Дополнительно</h2>
             <hr class="additionally__hr">
             <ul class="additionally__list">
@@ -117,17 +117,17 @@
         <p class="questionnaire__description">* — Обязательные поля</p>
       </section>
     </main>
-    <div class="contacts contacts--form">
+    <div class="contacts contacts--form wrapper">
       <b class="contacts__title">приглашаем
         к сотрудничеству дилеров!</b>
       <p class="contacts__text">ул. Большая
         Конюшенная, д. 19/8
         Санкт-Петербург</p>
     </div>
-  <div class="contacts__map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" height="100%" width="100%" allowfullscreen=""></iframe>
-  </div>
-    <footer class="page-footer">
+    <div class="contacts__map wrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" height="100%" width="100%" allowfullscreen=""></iframe>
+    </div>
+    <footer class="page-footer wrapper--with-padd">
       <div class="page-footer__logo">
       <img class="logo-text" src="img/logo-text.svg" alt="" height="24" width="128">
       </div>
