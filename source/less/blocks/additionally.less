@@ -6,6 +6,11 @@
   padding: 0;
   padding-left: 20px;
   max-width: 320px - 20px;
+
+  @media (min-width: 768px) {
+    max-width: none;
+    padding: 0;
+  }
 }
 
 .additionally h2 {
@@ -15,11 +20,31 @@
   margin: 0;
   margin-bottom: 34px;
   width: 163px;
+
+  @media (min-width: 768px) {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 38px;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 62px;
+  }
+}
+
+.additionally__hr--before {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    max-width: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 70px;
+  }
 }
 
 .additionally__hr {
-  display: inline-block;
-  width: 10px;
   margin: 0;
   flex-grow: 1;
   height: 2px;
@@ -29,17 +54,42 @@
 }
 
 .additionally__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 70px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 110px;
+    justify-content: space-between;
+  }
 }
 
 .additionally__item {
   margin-bottom: 13px;
   margin-left: 30px;
+  width: 45%;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 42px;
+    margin-left: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 42px;
+    width: fit-content;
   }
 }
 
@@ -58,6 +108,14 @@
     border: 1px solid #cdcdcd;
     box-sizing: border-box;
   }
+
+  @media (min-width: 768px) {
+    &::before {
+      width: 40px;
+      height: 40px;
+      left: -50px;
+    }
+  }
 }
 
 .additionally__input:checked + label::after {
@@ -69,4 +127,8 @@
   height: 30px;
   background-image: url("../img/positive-checkbox.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    top: 7px;
+  }
 }

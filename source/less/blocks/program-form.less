@@ -4,6 +4,18 @@
   padding-bottom: 25px;
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 568px;
+    border: 1px solid #d9d9d9;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 505px;
+  }
 }
 
 .program-form__list {
@@ -14,6 +26,10 @@
 
 .program-form__item {
   margin-bottom: 13px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 23px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -38,6 +54,18 @@
     border: 1px solid #cdcdcd;
     box-sizing: border-box;
   }
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      height: 40px;
+      width: 40px;
+      left: -50px;
+      top: -5px;
+    }
+  }
 }
 
 .program-form__input:checked + label::after {
@@ -49,4 +77,11 @@
   width: 13.5px;
   background-color: #68b738;
   border-radius: 50%;
+
+  @media (min-width: 768px) {
+    height: 18px;
+    width: 18px;
+    left: -39px;
+    top: 6px;
+  }
 }

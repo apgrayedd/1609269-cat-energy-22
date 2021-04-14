@@ -15,16 +15,22 @@
         <a href="index.html" class="page-header__link page-header__link--logo-text">
           <img class="logo__logo-text" src="img/logo-text.svg" alt="CAT ENERGY" height="18" width="101">
         </a>
+        <a href="index.html" class="page-header__link page-header__link--logo-tablet">
+          <img class="logo__tablet" src="img/logo-tablet.svg" alt="Логотип 'CAT ENERGY'">
+        </a>
+        <a href="index.html" class="page-header__link page-header__link--logo-desktop">
+          <img class="logo__desktop" src="img/logo-desktop.svg" alt="Логотип 'CAT ENERGY'">
+        </a>
         <nav class="page-header__nav main-nav">
           <button class="main-nav__toogle" aria-label="Открыть меню"><img src="img/button-menu-nav.svg" alt="" width="24" height="18"></button>
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--active">
+            <ul class="main-nav__list site-list wrapper">
+              <li class="site-list__item site-list__item--form">
                 <a href="index.html">Главная</a>
               </li>
-              <li class="site-list__item">
+              <li class="site-list__item site-list__item--form">
                 <a href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="site-list__item">
+              <li class="site-list__item site-list__item--form  site-list__item--active">
                 <a>Подбор программы</a>
               </li>
             </ul>
@@ -33,12 +39,11 @@
     </header>
     <main class="page-main wrapper">
       <h1 class="page-main__h2 page-main__h2--form">Подбор программы</h1>
+      <p class="page-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <section class="questionnaire">
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="questionnaire__fieldset information  wrapper--with-padd">
+          <fieldset class="questionnaire__fieldset information  wrapper--form">
             <h2 class="visually-hidden">Информация о коте</h2>
-            <p class="information__description">Заполните анкету, и мы подберем
-              программу питания для вашего кота</p>
             <ul class="information__list">
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-name">ИМЯ:<span class="information__span">*</span></label>
@@ -54,7 +59,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="questionnaire__fieldset program-form wrapper--with-padd">
+          <fieldset class="questionnaire__fieldset program-form">
             <h2 class="visually-hidden">Выбор программы</h2>
             <ul class="program-form__list">
               <li class="program-form__item">
@@ -72,8 +77,9 @@
             </ul>
           </fieldset>
           <fieldset class="questionnaire__fieldset user-contacts wrapper">
+            <hr class="user-contacts__hr user-contacts__hr--before">
             <h2>Контактные данные (владельца кота)</h2>
-            <hr class="user-contacts__hr">
+            <hr class="user-contacts__hr user-contacts__hr--after">
             <ul class="user-contacts__list">
               <li class="user-contacts__item user-contacts__item--email">
                 <label class="user-contacts__label select-program-label" for="input-email">E-mail:<span class="user-contacts__span">*</span></label>
@@ -86,13 +92,15 @@
             </ul>
           </fieldset>
           <fieldset class="questionnaire__fieldset comment wrapper">
+            <hr class="comment__hr comment__hr--before">
             <h2>Комментарий</h2>
-            <hr class="comment__hr">
+            <hr class="comment__hr comment__hr--after">
             <textarea class="comment__textarea select-program-input" name="comment" id="comment__textarea" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
           <fieldset class="questionnaire__fieldset additionally wrapper">
+            <hr class="additionally__hr additionally__hr--before">
             <h2>Дополнительно</h2>
-            <hr class="additionally__hr">
+            <hr class="additionally__hr additionally__hr--after">
             <ul class="additionally__list">
               <li class="additionally__item">
                 <input class="additionally__input visually-hidden" name="checkbox-sweetener" id="checkbox-sweetener" type="checkbox" checked>
@@ -113,24 +121,26 @@
             </ul>
           </fieldset>
           <button class="questionnaire__button" type="submit">отправить заявку</button>
+          <p class="questionnaire__description">* — Обязательные поля</p>
         </form>
-        <p class="questionnaire__description">* — Обязательные поля</p>
       </section>
     </main>
-    <div class="contacts contacts--form wrapper">
-      <b class="contacts__title">приглашаем
-        к сотрудничеству дилеров!</b>
-      <p class="contacts__text">ул. Большая
-        Конюшенная, д. 19/8
-        Санкт-Петербург</p>
-    </div>
-    <div class="contacts__map wrapper">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" height="100%" width="100%" allowfullscreen=""></iframe>
+    <div class="contacts wrapper">
+      <div class="contacts__info contacts__info--form">
+        <b class="contacts__title">приглашаем
+          к сотрудничеству дилеров!</b>
+        <p class="contacts__text">ул. Большая
+          Конюшенная, д. 19/8
+          <span>Санкт-Петербург</span></p>
+      </div>
+      <div class="contacts__map wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" height="100%" width="100%" allowfullscreen=""></iframe>
+      </div>
     </div>
     <footer class="page-footer wrapper--with-padd">
-      <div class="page-footer__logo">
-      <img class="logo-text" src="img/logo-text.svg" alt="" height="24" width="128">
-      </div>
+      <a class="page-footer__logo"  href="index.html">
+        <img class="logo-text" src="img/logo-text.svg" alt="" height="24" width="128">
+      </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
