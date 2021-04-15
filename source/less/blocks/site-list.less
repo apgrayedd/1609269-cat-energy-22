@@ -24,7 +24,9 @@
 .site-list__item a {
   color: @black;
   text-decoration: none;
+}
 
+.site-list__item--index a {
   @media (min-width: 1440px) {
     color: @white;
   }
@@ -52,20 +54,28 @@
     font-size: 20px;
     line-height: 30px;
   }
+}
 
-  &--active {
-    @media (min-width: 768px) {
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        border: 1px solid #68B738;
+.site-list__item.site-list__item--active {
+  @media (min-width: 768px) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border: 1px solid #68b738;
+    }
+  }
+}
 
-        @media (min-width: 1440px) {
-          border: 1px solid #FFFFFF;
-        }
-      }
+.site-list__item--index.site-list__item--active {
+  @media (min-width: 1440px) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border: 1px solid @white;
     }
   }
 }

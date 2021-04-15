@@ -1,16 +1,24 @@
 .information {
   border: none;
-}
+  padding: 0 20px;
 
-.information__description {
-  margin: 0;
+  @media (min-width: 768px) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 569px;
+  }
 }
 
 .information__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   list-style: none;
+  height: 100%;
   padding: 0;
   margin: 0;
-  margin-top: 39px;
 }
 
 .information__item {

@@ -2,44 +2,121 @@
   margin-bottom: 32px;
 }
 
+.questionnaire__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
 .questionnaire__fieldset {
   border: none;
 }
 
+.questionnaire__fieldset:nth-child(1) {
+  margin: 0;
+  margin-top: 39px;
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    margin-top: 66px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 66px;
+    margin-left: 110px;
+    margin-right: 80px;
+    padding: 0;
+  }
+}
+
 .questionnaire__fieldset:nth-child(2) {
   margin-top: 22px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    margin-top: 72px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 66px;
+    margin-right: 110px;
+    margin-left: 0;
+  }
 }
 
 .questionnaire__fieldset:nth-child(3) {
   margin-top: 26px;
+
+  @media (min-width: 768px) {
+    margin-top: 75px;
+  }
 }
 
 .questionnaire__fieldset:nth-child(4) {
   margin-top: 23px;
+
+  @media (min-width: 768px) {
+    margin-top: 65px;
+  }
 }
 
 .questionnaire__fieldset:nth-child(5) {
   margin-top: 22px;
   margin-bottom: 34px;
+
+  @media (min-width: 768px) {
+    margin-top: 65px;
+    margin-bottom: 59px;
+  }
 }
 
 .questionnaire__button {
+  .font(normal);
   border: none;
   outline: none;
   text-transform: uppercase;
   color: @white;
+  height: 40px;
+  width: 280px;
   margin-left: 20px;
   margin-right: 20px;
-  width: 320px - 20px - 20px;
-  height: 40px;
+  font-size: 16px;
+  line-height: 20px;
   background-color: #68b738;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 0px;
+    height: 52px;
+    width: 282px;
+    margin-right: 61px;
+    margin-left: 70px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 110px;
+    margin-right: 81px;
+    width: 568px;
+  }
 }
 
 .questionnaire__description {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   margin-top: 21px;
   margin-left: auto;
   margin-right: auto;
   width: max-content;
+  font-size: 14px;
+  line-height: 16px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
