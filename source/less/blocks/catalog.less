@@ -1,3 +1,20 @@
+.catalog {
+  margin-top: 41px;
+
+  @media (min-width: 768px) {
+    margin-top: 83px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 708px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 110px;
+    margin-right: 110px;
+    width: 1220px;
+  }
+}
+
 .catalog__list {
   width: 100%;
   margin: 0;
@@ -5,4 +22,9 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
