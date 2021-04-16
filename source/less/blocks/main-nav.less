@@ -1,5 +1,7 @@
 .main-nav {
   position: relative;
+  display: flex;
+  align-items: center;
 
   @media (min-width: 768px) {
     width: 440px;
@@ -13,15 +15,51 @@
 }
 
 .main-nav__toogle {
+  position: relative;
   cursor: pointer;
   background-color: transparent;
   outline: none;
   border: none;
   padding: 0;
-  pointer-events: none;
+  height: 18px;
+  width: 24px;
 
   @media (min-width: 768px) {
     display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toogle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: @black;
+    box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  }
+}
+
+.main-nav--open .main-nav__toogle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 23px;
+    height: 1.5px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(-45deg);
   }
 }
 
@@ -34,4 +72,8 @@
   @media (min-width: 768px) {
     position: static;
   }
+}
+
+.main-nav--open .main-nav__list {
+  display: flex;
 }
