@@ -24,6 +24,14 @@
 .site-list__item a {
   color: @black;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
 }
 
 .site-list__item--index a {
@@ -75,8 +83,9 @@
       content: "";
       position: absolute;
       bottom: 0;
+      height: 2px;
       width: 100%;
-      border: 1px solid @white;
+      background-color: @white;
     }
   }
 }
