@@ -1,4 +1,6 @@
 .range {
+  display: flex;
+  flex-direction: row;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -10,13 +12,69 @@
 }
 
 .range__input {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range__input-input {
   width: 105px;
   height: 14px;
-  background-color: white;
+  background: #FFFFFF;
+  border: 1px solid #CDCDCD;
+  box-sizing: border-box;
+  border-radius: 6px;
   appearance: none;
+  margin: 0;
+  z-index: 2;
 
   @media (min-width: 768px) {
     width: 428px;
+    height: 6px;
+    border: none;
+    background: #DCDCDC;
+  }
+}
+
+.range__input-slider {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 6px;
+  background: #68B738;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 6px;
+  left: 0;
+  border-radius: 6px;
+  z-index: 3;
+
+  @media (min-width: 768px) {
+    margin-left: 197px;
     height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+
+    &:hover {
+      border: 1px solid #68B738;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      background: #68B738;
+      border-radius: 50%;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
   }
 }
