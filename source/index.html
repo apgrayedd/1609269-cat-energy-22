@@ -45,7 +45,7 @@
       var main_nav = document.querySelector('.main-nav');
       var main_nav_toogle = document.querySelector('.page-header__toogle');
 
-      main_nav.classList.remove('main-nav--nojs1');
+      main_nav.classList.remove('main-nav--nojs');
 
       main_nav_toogle.addEventListener('click', function() {
         if (main_nav.classList.contains('main-nav--closed')) {
@@ -138,7 +138,7 @@
           <div class="example__range range">
             <label for="range" class="range__label range__label--before">было</label>
             <div class="range__input">
-              <input id ="range" type="range" class="range__input-input" min="0" max="5">
+              <input id ="range" type="range" class="range__input-input" min="0" max="1000" value="0">
               <div class="range__input-slider"></div>
             </div>
             <label for="range" class="range__label range__label--after">стало</label>
