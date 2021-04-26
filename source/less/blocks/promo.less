@@ -1,36 +1,90 @@
 .promo {
   color: @white;
   position: relative;
-  background-image: url("../img/promo-bg-image-mobile.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
   padding-top: 11px;
   z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 302px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/promo-bg-image-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -3;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo-bg-image-mobile@2x.jpg");
+    }
+
+    @media (min-resolution: 3dppx) {
+      background-image: url("../img/promo-bg-image-mobile@3x.jpg");
+    }
+
+    @media (min-resolution: 4dppx) {
+      background-image: url("../img/promo-bg-image-mobile@4x.jpg");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 302px;
+    top: 0;
+    right: 0;
+    background-color: rgba(104, 183, 56, 0.85);
+    z-index: -2;
+  }
 
   @media (min-width: 768px) {
     background-image: none;
     color: @black;
     padding-top: 62px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: 1440px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 80px;
     padding-top: 111px;
 
     &::before {
-      content: "";
-      position: absolute;
+      display: block;
+      background-image: url("../img/promo-bg-image-desktop.jpg");
       height: 694px;
       width: 720px;
-      right: -15px;
-      bottom: 65px;
-      background-image: url("../img/promo-bg-image-mobile.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: -5;
+      top: -117px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-bg-image-desktop@2x.jpg");
+      }
+
+      @media (min-resolution: 3dppx) {
+        background-image: url("../img/promo-bg-image-desktop@3x.jpg");
+      }
+
+      @media (min-resolution: 4dppx) {
+        background-image: url("../img/promo-bg-image-desktop@4x.jpg");
+      }
+    }
+
+    &::after {
+      display: block;
+      height: 694px;
+      width: 720px;
+      top: -117px;
     }
   }
 }
