@@ -19,15 +19,50 @@
   }
 }
 
-.social__svg {
-  stroke: #666666;
+.social__link--vkontakte .social__svg {
+  fill: #666666;
+  width: 23px;
+  height: 16px;
+
+  @media (min-width: 768px) {
+    fill: #666666;
+    width: 30px;
+    height: 22px;
+  }
+}
+
+.social__link--instagrem .social__svg {
+  fill: #666666;
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: 768px) {
+    width: 23px;
+    height: 23px;
+  }
 }
 
 .social__link:hover .social__svg {
+  fill: #68b738;
+}
+
+.social__link--facebook .social__svg {
+  stroke: #666666;
+  fill: none;
+  width: 22px;
+  height: 22px;
+
+  @media (min-width: 768px) {
+    width: 28px;
+    height: 33px;
+  }
+}
+
+.social__link--facebook:hover .social__svg {
   stroke: #68b738;
+  fill: none;
 }
 
 .social__link:focus {
   opacity: 0.3;
-  stroke: #68b738;
 }
