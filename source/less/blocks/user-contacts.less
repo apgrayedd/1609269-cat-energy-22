@@ -127,11 +127,11 @@
 
 .user-contacts__icon {
   position: absolute;
-  fill: none;
-  stroke: #222222;
 }
 
 .user-contacts__icon--email {
+  stroke: #222222;
+  fill: none;
   width: 19px;
   height: 15px;
   right: 17px;
@@ -144,6 +144,7 @@
 }
 
 .user-contacts__icon--tel {
+  fill: #222222;
   width: 20px;
   height: 21px;
   right: 13px;
@@ -155,10 +156,18 @@
   }
 }
 
-.user-contacts__input:focus + .user-contacts__icon {
+.user-contacts__input:focus + .user-contacts__icon--email {
   stroke: #68b738;
 }
 
-.select-program-input--error + .user-contacts__icon {
+.select-program-input--error + .user-contacts__icon--email {
   stroke: #ff8282;
+}
+
+.user-contacts__input:focus + .user-contacts__icon--tel {
+  fill: #68b738;
+}
+
+.select-program-input--error + .user-contacts__icon--tel {
+  fill: #ff8282;
 }
