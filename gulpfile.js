@@ -16,7 +16,7 @@ const del = require("del");
 
 // Styles
 
-const styles = (done) => {
+const styles = () => {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -26,19 +26,17 @@ const styles = (done) => {
     ]))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream()),
-    done();
+    .pipe(sync.stream());
 }
 
 exports.styles = styles;
 
 // html
 
-const html = (done) => {
+const html = () => {
   return gulp.src("source/**/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build")),
-    done();
+    .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
@@ -88,7 +86,7 @@ const createWebp = (done) => {
   done();
 }
 
-exports.webp = createWebp;
+exports.createWebp = createWebp;
 
 
 // Sprite
@@ -125,9 +123,8 @@ exports.copy = copy;
 
 // Clean
 
-const clean = (done) => {
-  return del("build"),
-  done();
+const clean = () => {
+  return del("build");
 };
 
 // Server
@@ -157,8 +154,9 @@ const reload = (done) => {
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/script.js", gulp.series(js));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Build
@@ -172,7 +170,7 @@ const build = gulp.series(
     html,
     js,
     sprite,
-    webp
+    createWebp
   ),
 );
 
@@ -189,7 +187,7 @@ exports.default = gulp.series(
     html,
     js,
     sprite,
-    webp
+    createWebp
   ),
   gulp.series(
     server,
