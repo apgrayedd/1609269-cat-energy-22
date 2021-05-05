@@ -5,10 +5,18 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
+const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const del = require("del");
 
 // Styles
 
-const styles = () => {
+const styles = (done) => {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
@@ -17,11 +25,110 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream()),
+    done();
 }
 
 exports.styles = styles;
+
+// html
+
+const html = (done) => {
+  return gulp.src("source/**/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build")),
+    done();
+}
+
+exports.html = html;
+
+//js
+
+const js = (done) => {
+  return gulp.src("source/js/*.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream()),
+    done();
+}
+
+exports.js = js;
+
+//Images
+
+const image = (done) => {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  .pipe(imagemin([
+    imagemin.mozjpeg({progressive: true}),
+    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest("build/img")),
+  done();
+}
+
+const copyImages = (done) => {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(gulp.dest("build/img")),
+    done();
+}
+
+
+exports.image = image;
+exports.image = copyImages;
+
+//webp
+
+const createWebp = (done) => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+  .pipe(webp({quality: 80}))
+  .pipe(gulp.dest("build/img")),
+  done();
+}
+
+exports.webp = createWebp;
+
+
+// Sprite
+
+const sprite = (done) => {
+  return gulp.src("source/img/icons/*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img")),
+    done();
+}
+
+exports.sprite = sprite;
+
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
+    "source/img/**/*.svg",
+    "!source/img/icons/*.svg",
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"));
+  done();
+}
+
+exports.copy = copy;
+
+
+// Clean
+
+const clean = (done) => {
+  return del("build"),
+  done();
+};
 
 // Server
 
@@ -39,6 +146,14 @@ const server = (done) => {
 
 exports.server = server;
 
+
+// Reload
+
+const reload = (done) => {
+  sync.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
@@ -46,6 +161,37 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-exports.default = gulp.series(
-  styles, server, watcher
+// Build
+
+const build = gulp.series(
+  clean,
+  copy,
+  image,
+  gulp.parallel(
+    styles,
+    html,
+    js,
+    sprite,
+    webp
+  ),
 );
+
+exports.build = build;
+
+// Default
+
+exports.default = gulp.series(
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    js,
+    sprite,
+    webp
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
