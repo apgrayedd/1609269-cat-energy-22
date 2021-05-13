@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="page-header wrapper">
       <div class="page-header__wrapper wrapper--with-padd">
         <div class="page-header__site-nav">
-          <a class="page-header__link page-header__link--logo-mobile logo">
+          <a class="page-header__link page-header__link--logo-mobile logo" href="index.html">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" height="60" width="202">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" height="52" width="174">
@@ -43,26 +43,7 @@
         </nav>
       </div>
     </header>
-    <script>
-      var main_nav = document.querySelector('.main-nav');
-      var main_nav_toogle = document.querySelector('.page-header__toogle');
-
-      main_nav.classList.remove('main-nav--nojs');
-
-      main_nav_toogle.addEventListener('click', function() {
-        if (main_nav.classList.contains('main-nav--closed')) {
-          main_nav.classList.remove('main-nav--closed');
-          main_nav.classList.add('main-nav--open');
-          main_nav_toogle.classList.remove("page-header__toogle--open");
-          main_nav_toogle.classList.add("page-header__toogle--closed");
-        } else {
-          main_nav.classList.add('main-nav--closed');
-          main_nav.classList.remove('main-nav--open');
-          main_nav_toogle.classList.remove("page-header__toogle--closed");
-          main_nav_toogle.classList.add("page-header__toogle--open");
-        }
-      });
-    </script>
+    <script src="js/script.min.js"></script>
     <main class="page-main wrapper">
       <h1 class="page-main__h2 page-main__h2--form">Подбор программы</h1>
       <p class="page-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
@@ -111,14 +92,14 @@
                 <label class="user-contacts__label select-program-label" for="input-email">E-mail:<span class="user-contacts__span">*</span></label>
                 <input class="user-contacts__input select-program-input" name="email" id="input-email" type="mail"/>
                 <svg class="user-contacts__icon user-contacts__icon--email" width="19" height="14">
-                  <use href="img/sprite-form.svg#email"></use>
+                  <use href="img/sprite.svg#email"></use>
                 </svg>
               </li>
               <li class="user-contacts__item user-contacts__item--tel">
                 <label class="user-contacts__label select-program-label" for="input-tel">Телефон:<span class="user-contacts__span">*</span></label>
                 <input class="user-contacts__input select-program-input" name="tel" id="input-tel" type="tel">
                 <svg class="user-contacts__icon user-contacts__icon--tel" width="20" height="21">
-                  <use href="img/sprite-form.svg#tel"></use>
+                  <use href="img/sprite.svg#tel"></use>
                 </svg>
               </li>
             </ul>
@@ -170,7 +151,7 @@
       </div>
     </div>
     <footer class="page-footer wrapper--with-padd">
-      <a href="#" class="logo page-footer__logo">
+      <a href="index.html" class="logo page-footer__logo">
         <svg class="logo-text" height="24" width="128">
           <use href="img/sprite.svg#logo-text"></use>
         </svg>
