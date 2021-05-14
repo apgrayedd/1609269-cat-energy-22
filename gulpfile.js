@@ -14,6 +14,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const cssmin = require("gulp-clean-css")
+const concat = require("gulp-concat")
 
 // Styles
 
@@ -24,6 +25,7 @@ const styles = () => {
       .pipe(less())
       .pipe(postcss([autoprefixer()]))
       .pipe(cssmin({compatibility: 'ie8'}))
+      .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -44,6 +46,7 @@ exports.html = html;
 
 const js = (done) => {
   return gulp.src("source/js/*.js")
+    .pipe(concat("script.js"))
     .pipe(sourcemap.init())
       .pipe(terser())
       .pipe(rename("script.min.js"))
@@ -155,7 +158,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(js));
+  gulp.watch("source/js/*.js", gulp.series(js));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 

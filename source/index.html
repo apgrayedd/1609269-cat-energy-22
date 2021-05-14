@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="js/script.min.js" as="script">
     <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -26,10 +26,10 @@
             </svg>
           </a>
           <div class="page-header__button">
-            <button class="page-header__toogle page-header__toogle--open" aria-label="Открыть меню"></button>
+            <button class="page-header__toogle" aria-label="Открыть меню"></button>
         </div>
         </div>
-        <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs wrapper">
+        <nav class="page-header__nav main-nav main-nav--nojs wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--index site-list__item--active">
               <a>Главная</a>
@@ -44,21 +44,22 @@
         </nav>
       </div>
     </header>
-    <script src="js/script.min.js"></script>
     <main class="page-main">
       <h1 class="visually-hidden">Магазин функционального питания для котов "CAT ENERGY"</h1>
-      <section class="promo wrapper--with-padd">
-        <div class="promo__background"></div>
-        <h2>Функциональное питание для котов</h2>
-        <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        <picture>
-          <source media="(min-width: 1440px)" type="image/webp" srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x" height="499" width="552">
-          <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x" height="609" width="709">
-          <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x" height="499" width="552">
-          <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x" height="609" width="709">
-          <img class="promo__img" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" alt="" height="270" width="280">
-        </picture>
-        <a href="form.html" class="promo__button">подобрать программу</a>
+      <section class="promo ">
+        <div class="promo__wrapper wrapper--with-padd">
+          <div class="promo__background"></div>
+          <h2>Функциональное питание для котов</h2>
+          <p class="promo__slogan">Занялся собой? Займись котом!</p>
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x" height="499" width="552">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x" height="609" width="709">
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x" height="499" width="552">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x" height="609" width="709">
+            <img class="promo__img" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" alt="" height="270" width="280">
+          </picture>
+          <a href="form.html" class="promo__button">подобрать программу</a>
+        </div>
       </section>
       <section class="program wrapper--with-padd">
         <h2 class="visually-hidden">Программы питания</h2>
@@ -67,13 +68,13 @@
             <img class="program__image program__image--slim" src="img/program-slim.svg" loading="lazy" alt="">
             <h3 class="program__name">Похудение</h3>
             <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="program__link" href="catalog.html">каталог slim</a>
+            <a class="program__link" href='catalog.html?filter=slim'>каталог slim</a>
           </li>
           <li class="program__item program__item--pro">
             <img class="program__image program__image--pro" src="img/program-pro.svg" loading="lazy" alt="">
             <h3 class="program__name">Набор массы</h3>
             <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="program__link" href="catalog.html">каталог pro</a>
+            <a class="program__link" href='catalog.html?filter=pro'>каталог pro</a>
           </li>
         </ul>
       </section>
@@ -136,12 +137,14 @@
             <img class="example__img-mobile example__img-mobile--after visually-hidden" src="img/example-after-mobile.png" srcset="img/example-after-mobile@2x.png 2x" alt="Кот после курса CAT ENERGY" loading="lazy" height="240" width="251">
           </picture>
           <div class="example__range range">
-            <label for="range" class="range__label range__label--before">было</label>
+            <button class="range__button range__button--before">
+              <span>было</span>
+            </button>
             <div class="range__input">
               <input id ="range" type="range" class="range__input-input" min="0" max="1000" value="0">
               <div class="range__input-slider"></div>
             </div>
-            <label for="range" class="range__label range__label--after">стало</label>
+            <button class="range__button range__button--after">стало</button>
           </div>
         </div>
       </section>
@@ -175,8 +178,8 @@
           </li>
           <li class="social__item">
             <a class="social__link social__link--instagrem" aria-label="Instagram" href="#">
-              <svg class="social__svg" width="20" height="20">
-                <use href="img/sprite.svg#inst"></use>
+              <svg width="20" height="20">
+                <use class="social__svg" href="img/sprite.svg#inst"></use>
               </svg>
             </a>
           </li>
@@ -198,5 +201,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

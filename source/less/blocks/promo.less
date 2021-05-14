@@ -51,13 +51,17 @@
     flex-direction: column;
     justify-content: center;
     padding-top: 111px;
+    width: 100%;
 
     &::before {
       display: block;
       background-image: url("../img/promo-bg-image-desktop.jpg");
-      height: 694px;
-      width: 720px;
+      background-size: cover;
+      background-position: right top -50px;
+      height: 696px;
+      width: 50%;
       top: -117px;
+      right: 0;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/promo-bg-image-desktop@2x.jpg");
@@ -66,10 +70,16 @@
 
     &::after {
       display: block;
-      height: 694px;
-      width: 720px;
+      height: 696px;
+      width: 50%;
       top: -117px;
     }
+  }
+}
+
+.promo__wrapper {
+  @media (min-width: 1440px){
+    width: 1220px;
   }
 }
 
@@ -120,6 +130,8 @@
   @media (min-width: 768px) {
     position: absolute;
     top: 200px;
+    right: -162px;
+    transform: translateX(-50%);
     z-index: -1;
     width: 709px;
     height: 609px;
