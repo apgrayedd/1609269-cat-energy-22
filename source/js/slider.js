@@ -16,4 +16,3 @@ button_after.addEventListener('click', function(){
   }
   img_before.classList.add("visually-hidden");
 })
-console.log(buttons);

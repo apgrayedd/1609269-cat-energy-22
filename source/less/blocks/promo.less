@@ -57,7 +57,7 @@
       display: block;
       background-image: url("../img/promo-bg-image-desktop.jpg");
       background-size: cover;
-      background-position: right top -50px;
+      background-position: right top;
       height: 696px;
       width: 50%;
       top: -117px;
@@ -78,7 +78,7 @@
 }
 
 .promo__wrapper {
-  @media (min-width: 1440px){
+  @media (min-width: 1440px) {
     width: 1220px;
   }
 }
@@ -129,8 +129,8 @@
 
   @media (min-width: 768px) {
     position: absolute;
-    top: 200px;
-    right: -162px;
+    top: 275px;
+    left: 50%;
     transform: translateX(-50%);
     z-index: -1;
     width: 709px;
@@ -139,7 +139,8 @@
 
   @media (min-width: 1440px) {
     top: 70px;
-    left: 600px;
+    right: 0;
+    left: 50%;
     width: 552px;
     height: 499px;
   }

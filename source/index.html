@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="js/script.min.js" as="script">
+    <link rel="preload" href="js/toogle.js" as="script">
     <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
-    <header class="page-header wrapper">
-      <div class="page-header__wrapper wrapper--with-padd">
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper--padd">
         <div class="page-header__site-nav">
           <a class="page-header__link page-header__link--logo-mobile logo">
             <picture>
@@ -47,7 +47,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Магазин функционального питания для котов "CAT ENERGY"</h1>
       <section class="promo ">
-        <div class="promo__wrapper wrapper--with-padd">
+        <div class="promo__wrapper wrapper--padd">
           <div class="promo__background"></div>
           <h2>Функциональное питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
@@ -61,7 +61,7 @@
           <a href="form.html" class="promo__button">подобрать программу</a>
         </div>
       </section>
-      <section class="program wrapper--with-padd">
+      <section class="program wrapper--padd">
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="program__list">
           <li class="program__item program__item--slim">
@@ -78,7 +78,7 @@
           </li>
         </ul>
       </section>
-      <section class="special wrapper">
+      <section class="special">
         <h2>Как это работает</h2>
         <ul class="special__list">
           <li class="special__item">
@@ -109,7 +109,7 @@
           </li>
         </ul>
       </section>
-      <section class="example wrapper--with-padd">
+      <section class="example wrapper--padd">
         <h2>Живой пример</h2>
         <p class="example__history">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <dl class="example__result-list">
@@ -157,50 +157,53 @@
           Конюшенная, д. 19/8
           <span>Санкт-Петербург</span></p>
       </div>
-      <div class="contacts__map wrapper">
+      <div class="contacts__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" height="100%" width="100%" allowfullscreen=""></iframe>
       </div>
     </div>
-    <footer class="page-footer wrapper--with-padd">
-      <a href="#" class="logo page-footer__logo">
-        <svg class="logo-text" height="24" width="128">
-          <use href="img/sprite.svg#logo-text"></use>
-        </svg>
-      </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" aria-label="Вконтакте" href="#">
-              <svg class="social__svg" width="28" height="18">
-                <use href="img/sprite.svg#vk"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagrem" aria-label="Instagram" href="#">
-              <svg width="20" height="20">
-                <use class="social__svg" href="img/sprite.svg#inst"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" aria-label="Facebook" href="#">
-              <svg class="social__svg" width="22" height="22">
-                <use href="img/sprite.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/22">
-          <p class="copyright__text">HTML Academy</p>
-          <svg class="copyright__img" width="27" height="34" xmlns="http://www.w3.org/2000/svg">
-            <use href="img/sprite.svg#htmlacademy"></use>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a href="#" class="logo page-footer__logo">
+          <svg class="logo-text" height="24" width="128">
+            <use href="img/sprite.svg#logo-text"></use>
           </svg>
         </a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" aria-label="Вконтакте" href="#">
+                <svg class="social__svg" width="28" height="18">
+                  <use href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagrem" aria-label="Instagram" href="#">
+                <svg width="20" height="20">
+                  <use class="social__svg" href="img/sprite.svg#inst"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" aria-label="Facebook" href="#">
+                <svg class="social__svg" width="22" height="22">
+                  <use href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/22">
+            <p class="copyright__text">HTML Academy</p>
+            <svg class="copyright__img" width="27" height="34" xmlns="http://www.w3.org/2000/svg">
+              <use href="img/sprite.svg#htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
-    <script src="js/script.min.js"></script>
+    <script src="js/toogle.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

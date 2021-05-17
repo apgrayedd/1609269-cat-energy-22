@@ -16,6 +16,7 @@
   line-height: 40px;
   margin-bottom: 38px;
   padding-left: 20px;
+  margin-top: 0;
 
   @media (min-width: 768px) {
     font-size: 60px;
@@ -29,17 +30,19 @@
 }
 
 .special__list {
+  display: grid;
   list-style: none;
+  grid-template-columns: 1fr;
   padding: 0 20px;
 
   @media (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 0 30px;
   }
 
   @media (min-width: 1440px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 0;
   }
 }
@@ -57,10 +60,6 @@
     width: 230px;
     height: 240px;
     padding-top: 40px;
-
-    &:nth-child(2n) {
-      margin-left: 153px;
-    }
   }
 
   @media (min-width: 1440px) {

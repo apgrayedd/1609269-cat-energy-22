@@ -63,8 +63,9 @@
   margin-right: 20px;
 
   @media (min-width: 768px) {
-    margin-left: 30px;
-    margin-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: calc(100% - 120px);
   }
 
   @media (min-width: 1440px) {
@@ -72,6 +73,8 @@
     align-items: stretch;
     justify-content: space-between;
     margin: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -84,9 +87,14 @@
   width: 100%;
   padding-right: 20px;
 
+  @media (min-width: 768px) {
+    padding-right: 0;
+  }
+
   @media (min-width: 1440px) {
     width: 896px;
     margin-left: 110px;
+    padding-right: 0;
   }
 }
 
