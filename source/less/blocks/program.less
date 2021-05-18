@@ -23,7 +23,7 @@
   align-items: center;
   background: #f2f2f2;
   padding: 20px 20px 18px 20px;
-  max-height: 266px;
+  height: 228px;
   margin-bottom: 20px;
 
   @media (min-width: 768px) {
@@ -31,6 +31,7 @@
     align-items: flex-start;
     margin-bottom: 30px;
     padding: 77px 28px 53px 52px;
+    height: 242px;
   }
 
   @media (min-width: 1440px) {
@@ -77,8 +78,7 @@
 
   @media (min-width: 768px) {
     order: 1;
-    margin-right: 0;
-    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: 1440px) {
@@ -105,6 +105,7 @@
 }
 
 .program__description {
+  font-family: Arial;
   font-size: 14px;
   line-height: 18px;
   border-bottom: 1px solid #d9d9d9;
@@ -119,6 +120,7 @@
     font-size: 16px;
     line-height: 24px;
     border: none;
+    margin-top: 0;
     margin-bottom: 48px;
     width: calc(100% - 268px);
     padding: 0;
@@ -157,9 +159,12 @@
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
+    margin-top: auto;
+    margin-bottom: 4px;
 
     &::before {
-      top: 10px;
+      top: 9px;
+      right: -49px;
     }
   }
 }

@@ -5,16 +5,17 @@
   position: relative;
   flex-wrap: wrap;
   background-color: #eaeaea;
-  margin-top: 42px;
+  margin-top: 22px;
   padding-top: 27px;
   padding-bottom: 40px;
   z-index: 2;
 
   @media (min-width: 768px) {
     background-color: @white;
-    padding-top: 64px;
-    margin-top: 0;
     justify-content: start;
+    padding-top: 44px;
+    padding-bottom: 54px;
+    margin-top: 0;
 
     &::before {
       content: "";
@@ -31,6 +32,8 @@
   @media (min-width: 1440px) {
     margin: 0 auto;
     padding: 0 110px;
+    padding-bottom: 75px;
+    justify-content: space-between;
 
     &::before {
       background-color: #f2f2f2;
@@ -46,8 +49,17 @@
   padding: 0 20px;
 
   @media (min-width: 768px) {
-    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: column;
     padding: 0;
+    margin: 0;
+    flex-grow: 1;
   }
 }
 
@@ -64,6 +76,7 @@
     line-height: 60px;
     margin-bottom: 63px;
     margin-right: 0;
+    width: 100%;
   }
 
   @media (min-width: 1440px) {
@@ -74,6 +87,7 @@
 }
 
 .example__history {
+  font-family: Arial;
   font-size: 14px;
   line-height: 18px;
   margin: 0;
@@ -121,7 +135,7 @@
   }
 
   @media (min-width: 768px) {
-    width: 162px;
+    width: 160px;
   }
 
   @media (min-width: 1440px) {
@@ -146,6 +160,7 @@
 
 .example__result-description {
   position: absolute;
+  font-family: Arial,sans-serif;
   font-size: 12px;
   line-height: 12px;
   margin-left: 18px;
@@ -153,7 +168,7 @@
   padding-left: 16px;
   padding-right: 16px;
   text-align: center;
-  bottom: -15px;
+  bottom: -10px;
   background-color: #eaeaea;
   color: @special-dark-grey;
 
@@ -163,7 +178,6 @@
     line-height: 14px;
     padding-left: 8px;
     padding-right: 8px;
-    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -187,7 +201,8 @@
     text-align: right;
     margin-left: auto;
     max-width: 180px;
-    margin-top: 54px;
+    margin-top: 65px;
+    margin-right: 1px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -200,7 +215,11 @@
   }
 }
 
-.example__expenses span {
+.example__expenses p {
+  @media (min-width: 768px) {
+    margin-top: 10px;
+  }
+
   @media (min-width: 1440px) {
     margin-left: 63px;
   }
@@ -210,13 +229,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 
   @media (min-width: 768px) {
     margin: 0;
-    width: 100%;
   }
 
   @media (min-width: 1440px) {
+    justify-content: space-between;
     width: fit-content;
     order: 1;
   }
@@ -230,7 +250,7 @@
 
   @media (min-width: 768px) {
     width: 708px;
-    height: 620px;
+    height: 520px;
   }
 
   @media (min-width: 1440px) {
