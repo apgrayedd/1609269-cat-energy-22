@@ -4,8 +4,6 @@
   }
 
   @media (min-width: 1440px) {
-    width: 1220px;
-    padding: 0 110px;
     border: none;
   }
 }
@@ -15,13 +13,11 @@
   font-size: 36px;
   line-height: 40px;
   margin-bottom: 38px;
-  padding-left: 20px;
   margin-top: 0;
 
   @media (min-width: 768px) {
     font-size: 60px;
     line-height: 60px;
-    padding-left: 30px;
   }
 
   @media (min-width: 1440px) {
@@ -31,19 +27,17 @@
 
 .special__list {
   display: grid;
-  list-style: none;
   grid-template-columns: 1fr;
-  padding: 0 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 
   @media (min-width: 768px) {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 30px;
   }
 
   @media (min-width: 1440px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0;
   }
 }
 
@@ -60,18 +54,6 @@
     width: 230px;
     height: 240px;
     padding-top: 40px;
-  }
-
-  @media (min-width: 1440px) {
-    margin-right: 94px;
-
-    &:nth-child(2n) {
-      margin-left: 0;
-    }
-
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
   }
 }
 

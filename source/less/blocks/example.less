@@ -29,14 +29,25 @@
   }
 
   @media (min-width: 1440px) {
-    flex-direction: column;
-    padding-top: 0;
-    height: 656px;
+    margin: 0 auto;
+    padding: 0 110px;
 
     &::before {
       background-color: #f2f2f2;
       right: 0;
     }
+  }
+}
+
+.example__info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -199,7 +210,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: -20px;
 
   @media (min-width: 768px) {
     margin: 0;
@@ -215,8 +225,8 @@
 .example__img-mobile {
   margin-top: 42px;
   margin-bottom: 30px;
-  width: 320px;
   height: 232px;
+  width: 320px;
 
   @media (min-width: 768px) {
     width: 708px;
