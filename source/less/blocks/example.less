@@ -7,14 +7,14 @@
   background-color: #eaeaea;
   margin-top: 22px;
   padding-top: 27px;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
   z-index: 2;
 
   @media (min-width: 768px) {
     background-color: @white;
     justify-content: start;
     padding-top: 44px;
-    padding-bottom: 54px;
+    padding-bottom: 70px;
     margin-top: 0;
 
     &::before {
@@ -81,7 +81,7 @@
 
   @media (min-width: 1440px) {
     width: fit-content;
-    padding-top: 69px;
+    padding-top: 27px;
     margin-bottom: 146px;
   }
 }
@@ -108,16 +108,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 26px;
+  margin-bottom: 4px;
   width: 279px;
 
   @media (min-width: 768px) {
     justify-content: flex-start;
     margin-top: 54px;
     width: 366px;
+    margin-bottom: 4px;
   }
 
   @media (min-width: 1440px) {
-    margin-bottom: 60px;
+    margin-top: 67px;
+    margin-bottom: 40px;
   }
 }
 
@@ -126,7 +129,7 @@
   border: 1px solid #cdcdcd;
   border-radius: 5px;
   width: 124px;
-  padding-top: 15px;
+  padding-top: 10px;
   position: relative;
   margin-bottom: 20px;
 
@@ -135,6 +138,7 @@
   }
 
   @media (min-width: 768px) {
+    padding-top: 15px;
     width: 160px;
   }
 
@@ -168,7 +172,7 @@
   padding-left: 16px;
   padding-right: 16px;
   text-align: center;
-  bottom: -10px;
+  bottom: -20px;
   background-color: #eaeaea;
   color: @special-dark-grey;
 
@@ -180,12 +184,14 @@
     padding-right: 8px;
     left: 50%;
     transform: translateX(-50%);
+    bottom: -10px;
     margin: 0;
     width: max-content;
   }
 
   @media (min-width: 1440px) {
     background-color: #f2f2f2;
+    bottom: -7px;
   }
 }
 
@@ -216,11 +222,16 @@
 }
 
 .example__expenses p {
+  display: inline-block;
+
   @media (min-width: 768px) {
+    display: block;
     margin-top: 10px;
   }
 
   @media (min-width: 1440px) {
+    display: inline-block;
+    margin: 0;
     margin-left: 63px;
   }
 }
@@ -239,23 +250,28 @@
     justify-content: space-between;
     width: fit-content;
     order: 1;
+    margin-bottom: -7px;
   }
 }
 
 .example__img-mobile {
-  margin-top: 42px;
-  margin-bottom: 30px;
+  margin-top: 27px;
+  margin-bottom: 26px;
   height: 232px;
-  width: 320px;
+  width: 311px;
+  margin-left: -9px;
 
   @media (min-width: 768px) {
     width: 708px;
     height: 520px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: 1440px) {
-    width: 730px;
-    height: 536px;
+    width: 650px;
+    height: auto;
     margin: 0;
+    margin-top: -30px;
+    margin-left: 70px;
   }
 }
