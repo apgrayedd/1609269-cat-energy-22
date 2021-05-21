@@ -7,6 +7,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
+
+  @media (min-width: 1440px) {
+    justify-content: space-between;
+  }
 }
 
 .questionnaire__fieldset {
@@ -14,26 +18,15 @@
 }
 
 .questionnaire__fieldset:nth-child(1) {
-  margin: 0;
   margin-top: 39px;
 
   @media (min-width: 768px) {
-    margin: 0 auto;
     margin-top: 66px;
-  }
-
-  @media (min-width: 1440px) {
-    margin-top: 66px;
-    margin-left: 110px;
-    margin-right: 80px;
-    padding: 0;
   }
 }
 
 .questionnaire__fieldset:nth-child(2) {
   margin-top: 22px;
-  margin-left: auto;
-  margin-right: auto;
 
   @media (min-width: 768px) {
     margin-top: 72px;
@@ -41,8 +34,6 @@
 
   @media (min-width: 1440px) {
     margin-top: 66px;
-    margin-right: 110px;
-    margin-left: 0;
   }
 }
 
@@ -79,7 +70,7 @@
   text-transform: uppercase;
   color: @white;
   height: 40px;
-  width: 280px;
+  width: 100%;
   margin-left: 20px;
   margin-right: 20px;
   font-size: 16px;

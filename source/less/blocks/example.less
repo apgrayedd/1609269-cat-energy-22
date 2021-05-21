@@ -107,14 +107,14 @@
 .example__result-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 26px;
-  margin-bottom: 4px;
+  margin: 26px auto 4px auto;
   width: 279px;
 
   @media (min-width: 768px) {
     justify-content: flex-start;
-    margin-top: 54px;
     width: 366px;
+    margin: 0;
+    margin-top: 54px;
     margin-bottom: 4px;
   }
 
