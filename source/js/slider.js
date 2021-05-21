@@ -6,7 +6,10 @@ var img_after = document.querySelector(".example__img-mobile--after")
 button_before.addEventListener('click', function(){
   if (img_before.classList.contains('visually-hidden')){
     img_before.classList.remove("visually-hidden");
+
   }
+  img_before.classList.add('example__img-mobile')
+  img_after.classList.remove('example__img-mobile')
   img_after.classList.add("visually-hidden");
 })
 
@@ -14,5 +17,7 @@ button_after.addEventListener('click', function(){
   if (img_after.classList.contains('visually-hidden')){
     img_after.classList.remove("visually-hidden");
   }
+  img_after.classList.add('example__img-mobile')
+  img_before.classList.remove('example__img-mobile')
   img_before.classList.add("visually-hidden");
 })
