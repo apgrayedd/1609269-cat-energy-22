@@ -87,7 +87,7 @@
 }
 
 .example__history {
-  font-family: Arial;
+  font-family: "Arial", "Oswald", sans-serif;
   font-size: 14px;
   line-height: 18px;
   margin: 0;
@@ -164,7 +164,7 @@
 
 .example__result-description {
   position: absolute;
-  font-family: Arial,sans-serif;
+  font-family: "Arial", "Oswald", sans-serif;
   font-size: 12px;
   line-height: 12px;
   margin-left: 18px;
@@ -244,12 +244,14 @@
 
   @media (min-width: 768px) {
     margin: 0;
+    margin-top: 35px;
   }
 
   @media (min-width: 1440px) {
     justify-content: space-between;
     width: fit-content;
     order: 1;
+    margin: 0;
     margin-bottom: -7px;
   }
 }
@@ -257,21 +259,23 @@
 .example__img-mobile {
   margin-top: 27px;
   margin-bottom: 26px;
-  height: 232px;
   width: 311px;
+  height: 232px;
   margin-left: -9px;
 
   @media (min-width: 768px) {
-    width: 708px;
-    height: 520px;
+    width: 696px;
+    height: 519px;
     margin-bottom: 30px;
+    margin-left: 20px;
   }
 
   @media (min-width: 1440px) {
-    width: 650px;
-    height: auto;
+    width: 660px;
+    height: 520px;
     margin: 0;
-    margin-top: -30px;
-    margin-left: 70px;
+    margin-top: -28px;
+    margin-left: auto;
+    margin-right: -80px;
   }
 }

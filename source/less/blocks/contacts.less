@@ -58,16 +58,18 @@
 }
 
 .contacts__text {
-  font-family: Arial;
+  font-family: "Arial", "Oswald", sans-serif;
   font-size: 14px;
   line-height: 20px;
   margin: 0;
   color: @special-dark-grey;
+  width: 150px;
 
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 20px;
     text-align: end;
+    width: auto;
   }
 }
 
@@ -92,6 +94,10 @@
 .contacts__map {
   padding: 0;
   height: 362px;
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
 }
 
 .contacts__map iframe {
