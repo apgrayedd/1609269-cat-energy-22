@@ -1,9 +1,12 @@
 .range {
   display: flex;
   flex-direction: row;
+  width: 200px;
+  justify-content: space-between;
 
   @media (min-width: 768px) {
     margin-top: -21px;
+    width: auto;
   }
 
   @media (min-width: 1440px) {
@@ -20,10 +23,25 @@
   text-transform: uppercase;
   border: none;
   background: none;
+  padding-left: 0;
+  padding-right: 0;
+
+  &--before {
+    margin-left: 5px;
+  }
 
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 0;
+
+    &--before {
+      margin-right: 28px;
+    }
+
+    &--after {
+      margin-left: 19px;
+    }
   }
 }
 
@@ -33,10 +51,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: -5px;
+
+  @media (min-width: 768px) {
+    margin-right: 0;
+  }
 }
 
 .range__input-input {
-  width: 105px;
+  width: 84px;
   height: 14px;
   background: @white;
   border: 1px solid #cdcdcd;
@@ -47,7 +70,7 @@
   z-index: 2;
 
   @media (min-width: 768px) {
-    width: 462px;
+    width: 428px;
     height: 6px;
     border: none;
     background: #dcdcdc;
@@ -68,7 +91,7 @@
   z-index: 3;
 
   @media (min-width: 768px) {
-    margin-left: 197px;
+    margin-left: 192px;
     height: 34px;
     width: 34px;
     border-radius: 50%;
@@ -92,5 +115,9 @@
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
     }
+  }
+
+  @media (min-width: 1440px) {
+    margin-left: 212px;
   }
 }

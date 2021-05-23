@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   width: auto;
-  padding: 5px 20px 0 20px;
+  padding: 7px 20px 0 20px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -49,6 +49,12 @@
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
+}
+
+.page-footer__logo .logo-text {
+  @media (min-width: 768px) and (max-width: 1439px) {
+    margin-top: -5px;
+  }
 }
 
 .page-footer__copyright {

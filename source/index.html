@@ -126,18 +126,20 @@
           <div class="example__expenses">Затраты на питание:<p> 15 000 РУБ.</p></div>
         </div>
         <div class="example__slider">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/example-before-desktop.webp 1x, img/example-before-desktop@2x.webp 2x" height="520" width="545">
-            <source type="image/webp" srcset="img/example-before-mobile.webp 1x, img/example-before-mobile@2x.webp 2x" height="240" width="251">
-            <source media="(min-width: 768px)" srcset="img/example-before-desktop.png 1x, img/example-before-desktop@2x.png 2x" height="520" width="677">
-            <img class="example__img-mobile example__img-mobile--before" src="img/example-before-mobile.png" srcset="img/example-before-mobile@2x.png 2x" alt="Кот до курса CAT ENERGY" loading="lazy" height="232" width="311">
-          </picture>
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/example-after-desktop.webp 1x, img/example-after-desktop@2x.webp 2x" height="520" width="545">
-            <source type="image/webp" srcset="img/example-after-mobile.webp 1x, img/example-after-mobile@2x.webp 2x" height="240" width="251">
-            <source media="(min-width: 768px)" srcset="img/example-after-desktop.png 1x, img/example-after-desktop@2x.png 2x" height="520" width="545">
-            <img class="example__img-mobile--after visually-hidden" src="img/example-after-mobile.png" srcset="img/example-after-mobile@2x.png 2x" alt="Кот после курса CAT ENERGY" loading="lazy" height="240" width="251">
-          </picture>
+          <div class="example_slide">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/example-before-desktop.webp 1x, img/example-before-desktop@2x.webp 2x" height="520" width="545">
+              <source type="image/webp" srcset="img/example-before-mobile.webp 1x, img/example-before-mobile@2x.webp 2x" height="240" width="251">
+              <source media="(min-width: 768px)" srcset="img/example-before-desktop.png 1x, img/example-before-desktop@2x.png 2x" height="520" width="677">
+              <img class="example__img-mobile example__img-mobile--before" src="img/example-before-mobile.png" srcset="img/example-before-mobile@2x.png 2x" alt="Кот до курса CAT ENERGY" loading="lazy" height="232" width="311">
+            </picture>
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/example-after-desktop.webp 1x, img/example-after-desktop@2x.webp 2x" height="520" width="545">
+              <source type="image/webp" srcset="img/example-after-mobile.webp 1x, img/example-after-mobile@2x.webp 2x" height="240" width="251">
+              <source media="(min-width: 768px)" srcset="img/example-after-desktop.png 1x, img/example-after-desktop@2x.png 2x" height="520" width="545">
+              <img class="example__img-mobile example__img-mobile--after" src="img/example-after-mobile.png" srcset="img/example-after-mobile@2x.png 2x" alt="Кот после курса CAT ENERGY" loading="lazy" height="240" width="251">
+            </picture>
+          </div>
           <div class="example__range range">
             <button class="range__button range__button--before">
               <span>было</span>
@@ -207,6 +209,5 @@
       </div>
     </footer>
     <script src="js/toogle.js"></script>
-    <script src="js/slider.js"></script>
   </body>
 </html>

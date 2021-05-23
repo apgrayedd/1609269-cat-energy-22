@@ -69,7 +69,7 @@
     }
 
     &:nth-child(2n) {
-      margin-left: auto;
+      margin-left: 23px;
       margin-right: 89px;
     }
   }
@@ -96,6 +96,18 @@
   }
 }
 
+.special__item:nth-child(2n) .special__number {
+  @media (min-width: 768px) and (max-width: 1439px) {
+    right: -14px;
+  }
+}
+
+.special__item:nth-child(3n) .special__number {
+  @media (min-width: 768px) and (max-width: 1439px) {
+    right: -14px;
+  }
+}
+
 .special__number {
   display: none;
 
@@ -109,6 +121,16 @@
     margin: 0;
     z-index: -1;
     color: #f2f2f2;
+  }
+
+  @media (min-width: 1440px) {
+    right: -15px;
+  }
+}
+
+.special__item:first-child .special__number {
+  @media (min-width: 1440px) {
+    right: 0;
   }
 }
 
