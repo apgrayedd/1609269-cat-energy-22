@@ -2,6 +2,8 @@
   border: none;
   padding: 0 20px;
   width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 
   @media (min-width: 768px) {
     margin-left: 71px;
@@ -30,8 +32,14 @@
   display: flex;
   align-items: center;
   margin-bottom: 13px;
+  height: 46px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    height: 52px;
+    margin-bottom: 20px;
   }
 }

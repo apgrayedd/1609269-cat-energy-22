@@ -1,5 +1,13 @@
 .questionnaire {
   margin-bottom: 32px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 82px;
+  }
 }
 
 .questionnaire__form {
@@ -18,7 +26,7 @@
 }
 
 .questionnaire__fieldset:nth-child(1) {
-  margin-top: 39px;
+  margin-top: 38px;
 
   @media (min-width: 768px) {
     margin-top: 66px;
@@ -38,28 +46,41 @@
 }
 
 .questionnaire__fieldset:nth-child(3) {
-  margin-top: 26px;
+  margin-top: 25px;
 
   @media (min-width: 768px) {
     margin-top: 75px;
   }
+
+  @media (min-width: 1440px) {
+    margin-top: 69px;
+  }
 }
 
 .questionnaire__fieldset:nth-child(4) {
-  margin-top: 23px;
+  margin-top: 11px;
 
   @media (min-width: 768px) {
-    margin-top: 65px;
+    margin-top: 45px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 47px;
   }
 }
 
 .questionnaire__fieldset:nth-child(5) {
-  margin-top: 22px;
-  margin-bottom: 34px;
+  margin-top: 23px;
+  margin-bottom: 37px;
 
   @media (min-width: 768px) {
     margin-top: 65px;
-    margin-bottom: 59px;
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 67px;
+    margin-bottom: 25px;
   }
 }
 
@@ -96,7 +117,7 @@
 
   @media (min-width: 1440px) {
     margin-left: 110px;
-    margin-right: 81px;
+    margin-right: 82px;
     width: 568px;
   }
 }
@@ -112,14 +133,19 @@
   width: max-content;
   font-size: 14px;
   line-height: 16px;
+  font-family: "Arial", "Oswald", sans-serif;
 
   @media (min-width: 768px) {
     margin: 0;
     font-size: 16px;
     line-height: 16px;
+    margin-top: -6px;
+    margin-left: 1px;
   }
 
   @media (min-width: 1440px) {
+    margin-top: -2px;
     margin-right: auto;
+    margin-left: 0;
   }
 }

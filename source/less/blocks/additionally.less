@@ -12,6 +12,12 @@
     margin-left: 0;
     margin-right: 0;
   }
+
+  @media (min-width: 1440px) {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .additionally h2 {
@@ -19,13 +25,13 @@
   font-size: 24px;
   line-height: 26px;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
   width: 163px;
 
   @media (min-width: 768px) {
     width: auto;
     padding-left: 40px;
-    padding-right: 38px;
+    padding-right: 41px;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 62px;
@@ -51,7 +57,11 @@
   height: 2px;
   background-color: #68b738;
   border: none;
-  margin-top: 18px;
+  margin-top: 16px;
+
+  @media (min-width: 768px) {
+    margin-top: 22px;
+  }
 }
 
 .additionally__list {
@@ -67,17 +77,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 70px;
-    margin-left: 40px;
+    margin-left: 0;
   }
 
   @media (min-width: 1440px) {
     padding: 0 110px;
-    justify-content: space-between;
+    margin-left: 0;
   }
 }
 
 .additionally__item {
-  margin-bottom: 13px;
+  margin-bottom: 19px;
   width: 100%;
 
   &:last-child {
@@ -85,24 +95,36 @@
   }
 
   @media (min-width: 768px) {
-    width: 50%;
+    width: 221px;
+    margin-right: 123px;
     margin-bottom: 42px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 
   @media (min-width: 1440px) {
-    margin-bottom: 42px;
-    width: fit-content;
+    margin-right: 104px;
+
+    &:nth-child(2n) {
+      margin-right: 104px;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
   }
 }
 
 .additionally__label {
   position: relative;
-  margin-left: 16px;
+  margin-left: 15px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 13px;
     transform: translateY(-50%);
     left: -45px;
     width: 30px;
@@ -118,10 +140,13 @@
   }
 
   @media (min-width: 768px) {
+    margin-left: 59px;
+
     &::before {
+      top: 50%;
       width: 40px;
       height: 40px;
-      left: -50px;
+      left: -59px;
     }
   }
 }
@@ -133,7 +158,7 @@
 .additionally__input:checked + label::after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: -39px;
   width: 30px;
   height: 30px;
@@ -141,6 +166,7 @@
   background-repeat: no-repeat;
 
   @media (min-width: 768px) {
-    top: 7px;
+    top: 8px;
+    left: -48px;
   }
 }

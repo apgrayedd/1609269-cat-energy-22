@@ -46,7 +46,7 @@
     </header>
     <main class="page-main wrapper">
       <h1 class="page-main__h2 page-main__h2--form">Подбор программы</h1>
-      <p class="page-main__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="page-main__description page-main__description--form">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <section class="questionnaire">
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="questionnaire__fieldset information  wrapper--form">
@@ -54,15 +54,15 @@
             <ul class="information__list">
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-name">ИМЯ:<span class="information__span">*</span></label>
-                <input class="information__input select-program-input" name="name" id="input-name" type="text">
+                <input class="information__input select-program-input" name="name" id="input-name" type="text" value="БАРСИК">
               </li>
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-weight">Вес (кг):<span class="information__span">*</span></label>
-                <input class="information__input select-program-input" name="weight" id="input-weight" type="text">
+                <input class="information__input select-program-input" name="weight" id="input-weight" type="text" value="7">
               </li>
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-age">Возраст (лет):</label>
-                <input class="information__input select-program-input" name="age" id="input-age" type="text">
+                <input class="information__input select-program-input" name="age" id="input-age" type="text" value="7">
               </li>
             </ul>
           </fieldset>
@@ -90,14 +90,14 @@
             <ul class="user-contacts__list">
               <li class="user-contacts__item user-contacts__item--email">
                 <label class="user-contacts__label select-program-label" for="input-email">E-mail:<span class="user-contacts__span">*</span></label>
-                <input class="user-contacts__input select-program-input" name="email" id="input-email" type="email"/>
+                <input class="user-contacts__input select-program-input" name="email" id="input-email" type="email" placeholder="кuklachev@gmail.com"/>
                 <svg class="user-contacts__icon user-contacts__icon--email" width="19" height="14">
                   <use href="img/sprite.svg#email"></use>
                 </svg>
               </li>
               <li class="user-contacts__item user-contacts__item--tel">
                 <label class="user-contacts__label select-program-label" for="input-tel">Телефон:<span class="user-contacts__span">*</span></label>
-                <input class="user-contacts__input select-program-input" name="tel" id="input-tel" type="tel">
+                <input class="user-contacts__input select-program-input" name="tel" id="input-tel" type="tel" placeholder="8 (960) 900-60-90">
                 <svg class="user-contacts__icon user-contacts__icon--tel" width="20" height="21">
                   <use href="img/sprite.svg#tel"></use>
                 </svg>
