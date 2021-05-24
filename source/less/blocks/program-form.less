@@ -5,16 +5,21 @@
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: 768px) {
-    width: 568px;
     border: 1px solid #d9d9d9;
     padding-left: 30px;
     padding-right: 30px;
+    margin-right: 67px;
+    margin-left: 71px;
   }
 
   @media (min-width: 1440px) {
-    width: 505px;
+    width: 35.1%;
+    margin-right: 112px;
+    margin-left: 40px;
   }
 }
 
@@ -55,6 +60,12 @@
     box-sizing: border-box;
   }
 
+  &:hover {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
   @media (min-width: 768px) {
     font-size: 20px;
     line-height: 30px;
@@ -66,6 +77,10 @@
       top: -5px;
     }
   }
+}
+
+.program-form__input:disabled + label {
+  opacity: 0.3;
 }
 
 .program-form__input:checked + label::after {

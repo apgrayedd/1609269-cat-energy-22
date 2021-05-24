@@ -1,32 +1,35 @@
 .logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-.page-header__link--logo-text,
-.page-header__link--logo-mobile {
-  @media (min-width: 768px) {
-    display: none;
+  &:focus {
+    opacity: 0.6;
   }
 }
 
-.page-header__link--logo-tablet {
-  display: none;
+.logo__logo {
+  height: 37px;
+  width: 33px;
 
   @media (min-width: 768px) {
-    display: block;
+    height: 52px;
+    width: 174px;
   }
 
   @media (min-width: 1440px) {
-    display: none;
+    height: 60px;
+    width: 202px;
   }
 }
 
-.page-header__link--logo-desktop {
-  display: none;
+.logo__logo-text {
+  height: 18px;
+  width: 101px;
+}
 
-  @media (min-width: 1440px) {
-    display: block;
+.page-header__link--logo-text {
+  @media (min-width: 768px) {
+    display: none;
   }
 }

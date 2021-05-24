@@ -5,11 +5,12 @@
   flex-wrap: wrap;
   padding: 0;
   padding-left: 20px;
-  max-width: 320px - 20px;
+  width: 100%;
 
   @media (min-width: 768px) {
-    max-width: none;
     padding: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -110,6 +111,12 @@
     box-sizing: border-box;
   }
 
+  &:hover {
+    &::before {
+      border: 1px solid #bababa;
+    }
+  }
+
   @media (min-width: 768px) {
     &::before {
       width: 40px;
@@ -117,6 +124,10 @@
       left: -50px;
     }
   }
+}
+
+.additionally__input:disabled + label {
+  opacity: 0.3;
 }
 
 .additionally__input:checked + label::after {
