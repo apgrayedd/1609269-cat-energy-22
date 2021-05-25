@@ -1,6 +1,7 @@
 .page-header {
   .font(medium;);
   margin-top: 12px;
+  width: 100%;
 
   @media (min-width: 768px) {
     border: none;
@@ -24,10 +25,21 @@
   @media (min-width: 768px) {
     align-items: center;
     padding: 0 30px;
+    max-width: 708px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: 1440px) {
     padding: 0 110px;
+    max-width: 1220px;
+  }
+}
+
+.page-header__wrapper--index {
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding-left: 0;
+    padding-right: 60px;
   }
 }
 
@@ -54,6 +66,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 767px) {
+    margin-left: -9px;
+  }
 }
 
 .page-header__button {

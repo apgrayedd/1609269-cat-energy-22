@@ -20,7 +20,7 @@
               <img class="logo__logo" src="img/logo-mobile.svg" alt="Логотип 'CAT ENERGY'" height="37" width="33">
             </picture>
           </a>
-          <a class="page-header__link page-header__link--logo-text logo">
+          <a class="page-header__link page-header__link--logo-text logo" href="index.html">
             <svg width="101" height="18">
               <use href="img/sprite.svg#logo-text"></use>
             </svg>
@@ -31,13 +31,13 @@
         </div>
         <nav class="page-header__nav main-nav main-nav--nojs wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--form">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item site-list__item--form">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item site-list__item--active">
+            <li class="site-list__item site-list__item--form site-list__item--active">
               <a>Подбор программы</a>
             </li>
           </ul>
@@ -106,7 +106,7 @@
           </fieldset>
           <fieldset class="questionnaire__fieldset comment wrapper">
             <hr class="comment__hr comment__hr--before">
-            <h2>Комментарий</h2>
+            <h2><label for="comment__textarea">Комментарий</label></h2>
             <hr class="comment__hr comment__hr--after">
             <textarea class="comment__textarea select-program-input" name="comment" id="comment__textarea" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
@@ -138,9 +138,9 @@
         </form>
       </section>
     </main>
-    <div class="contacts">
-      <div class="contacts__info contacts__info--form">
-        <b class="contacts__title">приглашаем
+    <div class="contacts contacts--index">
+      <div class="contacts__info">
+        <b class="contacts__title">приглашаем <br>
           к сотрудничеству дилеров!</b>
         <p class="contacts__text">ул. Большая
           Конюшенная, д. 19/8

@@ -63,6 +63,14 @@
   @media (min-width: 1440px) {
     font-size: 20px;
     line-height: 30px;
+
+    &:nth-child(2n) {
+      margin-left: 4px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: -2px;
+    }
   }
 }
 
@@ -94,6 +102,33 @@
       height: 2px;
       width: 100%;
       background-color: @white;
+    }
+  }
+}
+
+
+.site-list__item--index {
+  @media (min-width: 767px) and (max-width: 1439px) {
+    margin-bottom: -2px;
+  }
+}
+
+.site-list__item--catalog:nth-child(2n) {
+  @media (min-width: 767px) and (max-width: 1439px) {
+    margin-left: -5px;
+  }
+}
+
+.site-list__item--form {
+  &:nth-child(2n) {
+    @media (min-width: 767px) and (max-width: 1439px) {
+      margin-left: -3px;
+    }
+  }
+
+  &:nth-child(3n) {
+    @media (min-width: 767px) and (max-width: 1439px) {
+      margin-right: 1px;
     }
   }
 }

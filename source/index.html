@@ -11,7 +11,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper wrapper--padd">
+      <div class="page-header__wrapper page-header__wrapper--index wrapper--padd">
         <div class="page-header__site-nav ">
           <a class="page-header__link page-header__link--logo-mobile logo">
             <picture>
@@ -73,7 +73,7 @@
           <li class="program__item program__item--pro">
             <img class="program__image program__image--pro" src="img/program-pro.svg" loading="lazy" alt="">
             <h3 class="program__name">Набор массы</h3>
-            <p class="program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <p class="program__description">Заработать авторитет среди дворовых котов <br class="program__br--768"/> и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые <br class="program__br--768"/> мышцы!</p>
             <a class="program__link" href='catalog.html?filter=pro'>каталог pro</a>
           </li>
         </ul>
@@ -105,57 +105,59 @@
           <li class="special__item">
             <p class="special__number">4</p>
             <img class="special__image" src="img/icon-alarm.svg" alt="" loading="lazy" height="60" width="60">
-            <p class="special__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="special__description">Уже через месяц наслаждайтесь <br class="special__br">изменениями к лучшему <br class="special__br"> вашего питомца!</p>
           </li>
         </ul>
       </section>
-      <section class="example wrapper">
-        <div class="example__info">
-          <h2>Живой пример</h2>
-          <p class="example__history">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="example__result-list">
-            <div class="example__result-item">
-              <dt class="example__result-weight">5 КГ</dt>
-              <dd class="example__result-description">снижение веса</dd>
-            </div>
-            <div class="example__result-item">
-              <dt class="example__result-day">60 ДНЕЙ</dt>
-              <dd class="example__result-description">затрачено времени</dd>
-            </div>
-          </dl>
-          <div class="example__expenses">Затраты на питание:<p> 15 000 РУБ.</p></div>
-        </div>
-        <div class="example__slider">
-          <div class="example_slide">
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/example-before-desktop.webp 1x, img/example-before-desktop@2x.webp 2x" height="520" width="545">
-              <source type="image/webp" srcset="img/example-before-mobile.webp 1x, img/example-before-mobile@2x.webp 2x" height="240" width="251">
-              <source media="(min-width: 768px)" srcset="img/example-before-desktop.png 1x, img/example-before-desktop@2x.png 2x" height="520" width="677">
-              <img class="example__img-mobile example__img-mobile--before" src="img/example-before-mobile.png" srcset="img/example-before-mobile@2x.png 2x" alt="Кот до курса CAT ENERGY" loading="lazy" height="232" width="311">
-            </picture>
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/example-after-desktop.webp 1x, img/example-after-desktop@2x.webp 2x" height="520" width="545">
-              <source type="image/webp" srcset="img/example-after-mobile.webp 1x, img/example-after-mobile@2x.webp 2x" height="240" width="251">
-              <source media="(min-width: 768px)" srcset="img/example-after-desktop.png 1x, img/example-after-desktop@2x.png 2x" height="520" width="545">
-              <img class="example__img-mobile example__img-mobile--after" src="img/example-after-mobile.png" srcset="img/example-after-mobile@2x.png 2x" alt="Кот после курса CAT ENERGY" loading="lazy" height="240" width="251">
-            </picture>
+      <section class="example">
+        <div class="example__wrapper">
+          <div class="example__info">
+            <h2>Живой пример</h2>
+            <p class="example__history">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <dl class="example__result-list">
+              <div class="example__result-item">
+                <dt class="example__result-weight">5 КГ</dt>
+                <dd class="example__result-description">снижение веса</dd>
+              </div>
+              <div class="example__result-item">
+                <dt class="example__result-day">60 ДНЕЙ</dt>
+                <dd class="example__result-description">затрачено времени</dd>
+              </div>
+            </dl>
+            <div class="example__expenses">Затраты на питание:<p> 15 000 РУБ.</p></div>
           </div>
-          <div class="example__range range">
-            <button class="range__button range__button--before">
-              <span>было</span>
-            </button>
-            <div class="range__input">
-              <input id ="range" type="range" class="range__input-input" min="0" max="1000" value="0">
-              <div class="range__input-slider"></div>
+          <div class="example__slider">
+            <div class="example_slide">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/example-before-desktop.webp 1x, img/example-before-desktop@2x.webp 2x" height="520" width="545">
+                <source type="image/webp" srcset="img/example-before-mobile.webp 1x, img/example-before-mobile@2x.webp 2x" height="240" width="251">
+                <source media="(min-width: 768px)" srcset="img/example-before-desktop.png 1x, img/example-before-desktop@2x.png 2x" height="520" width="677">
+                <img class="example__img-mobile example__img-mobile--before" src="img/example-before-mobile.png" srcset="img/example-before-mobile@2x.png 2x" alt="Кот до курса CAT ENERGY" loading="lazy" height="232" width="311">
+              </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/example-after-desktop.webp 1x, img/example-after-desktop@2x.webp 2x" height="520" width="545">
+                <source type="image/webp" srcset="img/example-after-mobile.webp 1x, img/example-after-mobile@2x.webp 2x" height="240" width="251">
+                <source media="(min-width: 768px)" srcset="img/example-after-desktop.png 1x, img/example-after-desktop@2x.png 2x" height="520" width="545">
+                <img class="example__img-mobile example__img-mobile--after" src="img/example-after-mobile.png" srcset="img/example-after-mobile@2x.png 2x" alt="Кот после курса CAT ENERGY" loading="lazy" height="240" width="251">
+              </picture>
             </div>
-            <button class="range__button range__button--after">стало</button>
+            <div class="example__range range">
+              <button class="range__button range__button--before">
+                <span>было</span>
+              </button>
+              <div class="range__input">
+                <input id ="range" type="range" class="range__input-input" min="0" max="1000" value="0">
+                <div class="range__input-slider"></div>
+              </div>
+              <button class="range__button range__button--after">стало</button>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <div class="contacts">
-      <div class="contacts__info contacts__info--index">
-        <b class="contacts__title">приглашаем
+    <div class="contacts contacts--index">
+      <div class="contacts__info">
+        <b class="contacts__title">приглашаем <br>
           к сотрудничеству дилеров!</b>
         <div class="contacts__text">
           <p>ул. Большая Конюшенная, д. 19/8</p>
@@ -167,7 +169,7 @@
       </div>
     </div>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__wrapper page-footer__wrapper--index">
         <a href="#" class="logo page-footer__logo">
           <svg class="logo-text" height="24" width="128">
             <use href="img/sprite.svg#logo-text"></use>
