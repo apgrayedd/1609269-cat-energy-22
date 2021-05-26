@@ -8,6 +8,7 @@
   margin-bottom: 35px;
   margin-right: 20px;
   width: 100%;
+  background-color: rgba(104, 183, 56, 0.85);
   background-image: url("../img/gift-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,6 +23,9 @@
     height: 200px;
     background-image: url("../img/gift-bg-tablet.jpg");
     margin-top: 67px;
+    max-width: 708px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/gift-bg-tablet@2x.jpg");
@@ -31,6 +35,7 @@
   @media (min-width: 1440px) {
     flex-direction: column;
     width: 245px;
+    max-width: none;
     height: 289px;
     padding: 0;
     margin: 0;

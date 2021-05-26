@@ -15,13 +15,13 @@
         <div class="page-header__site-nav">
           <a class="page-header__link page-header__link--logo-mobile logo" href="index.html">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" height="60" width="202">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" height="52" width="174">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
               <img class="logo__logo" src="img/logo-mobile.svg" alt="Логотип 'CAT ENERGY'" height="37" width="33">
             </picture>
           </a>
           <a class="page-header__link page-header__link--logo-text logo" href="index.html">
-            <svg width="101" height="18">
+            <svg width="101" height="18" aria-label="Логотип 'CAT ENERGY">
               <use href="img/sprite.svg#logo-text"></use>
             </svg>
           </a>
@@ -44,9 +44,11 @@
         </nav>
       </div>
     </header>
-    <main class="page-main wrapper">
+    <main class="page-main">
       <h1 class="page-main__h2 page-main__h2--form">Подбор программы</h1>
-      <p class="page-main__description page-main__description--form">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <div class="page-main__description">
+        <p class="page-main__description__text page-main__description__text--form">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <section class="questionnaire">
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="questionnaire__fieldset information  wrapper--form">
@@ -54,91 +56,107 @@
             <ul class="information__list">
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-name">ИМЯ:<span class="information__span">*</span></label>
-                <input class="information__input select-program-input" name="name" id="input-name" type="text" value="БАРСИК">
+                <input class="information__input select-program-input" name="name" id="input-name" type="text" value="БАРСИК" required>
               </li>
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-weight">Вес (кг):<span class="information__span">*</span></label>
-                <input class="information__input select-program-input" name="weight" id="input-weight" type="text" value="7">
+                <input class="information__input select-program-input" name="weight" id="input-weight" type="text" value="7" required>
               </li>
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-age">Возраст (лет):</label>
-                <input class="information__input select-program-input" name="age" id="input-age" type="text" value="7">
+                <input class="information__input select-program-input" name="age" id="input-age" type="text" value="7" required>
               </li>
             </ul>
           </fieldset>
           <fieldset class="questionnaire__fieldset program-form">
             <h2 class="visually-hidden">Выбор программы</h2>
-            <ul class="program-form__list">
-              <li class="program-form__item">
-                <input class="program-form__input visually-hidden" name="program" value="slim" id="radio-slim" type="radio" checked>
-                <label class="program-form__label" for="radio-slim">похудение</label>
-              </li>
-              <li class="program-form__item">
-                <input class="program-form__input visually-hidden" name="program" value="pro" id="radio-pro" type="radio">
-                <label class="program-form__label" for="radio-pro">Набор массы</label>
-              </li>
-              <li class="program-form__item">
-                <input class="program-form__input visually-hidden" name="program" value="need-advice" id="radio-need-advice" type="radio">
-                <label class="program-form__label" for="radio-need-advice">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
+            <div class="program-form__wrapper">
+              <ul class="program-form__list">
+                <li class="program-form__item">
+                  <input class="program-form__input visually-hidden" name="program" value="slim" id="radio-slim" type="radio" checked>
+                  <label class="program-form__label" for="radio-slim">похудение</label>
+                </li>
+                <li class="program-form__item">
+                  <input class="program-form__input visually-hidden" name="program" value="pro" id="radio-pro" type="radio">
+                  <label class="program-form__label" for="radio-pro">Набор массы</label>
+                </li>
+                <li class="program-form__item">
+                  <input class="program-form__input visually-hidden" name="program" value="need-advice" id="radio-need-advice" type="radio">
+                  <label class="program-form__label" for="radio-need-advice">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
           </fieldset>
-          <fieldset class="questionnaire__fieldset user-contacts wrapper">
+          <fieldset class="questionnaire__fieldset user-contacts">
             <hr class="user-contacts__hr user-contacts__hr--before">
-            <h2>Контактные данные (владельца кота)</h2>
+            <div class="user-contacts__wrapper">
+              <hr class="user-contacts__hr user-contacts__hr-h2 user-contacts__hr-h2--before">
+              <h2>Контактные данные (владельца кота)</h2>
+              <hr class="user-contacts__hr user-contacts__hr-h2 user-contacts__hr-h2--after">
+              <ul class="user-contacts__list">
+                <li class="user-contacts__item user-contacts__item--email">
+                  <label class="user-contacts__label select-program-label" for="input-email">E-mail:<span class="user-contacts__span">*</span></label>
+                  <input class="user-contacts__input select-program-input" name="email" id="input-email" type="email" placeholder="кuklachev@gmail.com" required/>
+                  <svg class="user-contacts__icon user-contacts__icon--email" width="19" height="14">
+                    <use href="img/sprite.svg#email"></use>
+                  </svg>
+                </li>
+                <li class="user-contacts__item user-contacts__item--tel">
+                  <label class="user-contacts__label select-program-label" for="input-tel">Телефон:<span class="user-contacts__span">*</span></label>
+                  <input class="user-contacts__input select-program-input" name="tel" id="input-tel" type="tel" placeholder="8 (960) 900-60-90" required>
+                  <svg class="user-contacts__icon user-contacts__icon--tel" width="20" height="21">
+                    <use href="img/sprite.svg#tel"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
             <hr class="user-contacts__hr user-contacts__hr--after">
-            <ul class="user-contacts__list">
-              <li class="user-contacts__item user-contacts__item--email">
-                <label class="user-contacts__label select-program-label" for="input-email">E-mail:<span class="user-contacts__span">*</span></label>
-                <input class="user-contacts__input select-program-input" name="email" id="input-email" type="email" placeholder="кuklachev@gmail.com"/>
-                <svg class="user-contacts__icon user-contacts__icon--email" width="19" height="14">
-                  <use href="img/sprite.svg#email"></use>
-                </svg>
-              </li>
-              <li class="user-contacts__item user-contacts__item--tel">
-                <label class="user-contacts__label select-program-label" for="input-tel">Телефон:<span class="user-contacts__span">*</span></label>
-                <input class="user-contacts__input select-program-input" name="tel" id="input-tel" type="tel" placeholder="8 (960) 900-60-90">
-                <svg class="user-contacts__icon user-contacts__icon--tel" width="20" height="21">
-                  <use href="img/sprite.svg#tel"></use>
-                </svg>
-              </li>
-            </ul>
           </fieldset>
-          <fieldset class="questionnaire__fieldset comment wrapper">
+          <fieldset class="questionnaire__fieldset comment">
             <hr class="comment__hr comment__hr--before">
-            <h2><label for="comment__textarea">Комментарий</label></h2>
+            <div class="comment__wrapper">
+              <hr class="comment__hr comment__hr-h2 comment__hr-h2--before">
+              <h2><label for="comment__textarea">Комментарий</label></h2>
+              <hr class="comment__hr comment__hr-h2 comment__hr-h2--after">
+              <textarea class="comment__textarea select-program-input" name="comment" id="comment__textarea" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+            </div>
             <hr class="comment__hr comment__hr--after">
-            <textarea class="comment__textarea select-program-input" name="comment" id="comment__textarea" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
           </fieldset>
           <fieldset class="questionnaire__fieldset additionally wrapper">
             <hr class="additionally__hr additionally__hr--before">
-            <h2>Дополнительно</h2>
+            <div class="additionally__wrapper">
+              <hr class="additionally__hr additionally__hr-h2 additionally__hr-h2--before">
+              <h2>Дополнительно</h2>
+              <hr class="additionally__hr additionally__hr-h2 additionally__hr-h2--after">
+              <ul class="additionally__list">
+                <li class="additionally__item">
+                  <input class="additionally__input visually-hidden" name="checkbox-sweetener" id="checkbox-sweetener" type="checkbox" checked>
+                  <label class="additionally__label select-program-label" for="checkbox-sweetener">сахарозаменитель</label>
+                </li>
+                <li class="additionally__item">
+                  <input class="additionally__input visually-hidden" name="checkbox-drinking-water" id="checkbox-drinking-water" type="checkbox">
+                  <label class="additionally__label select-program-label" for="checkbox-drinking-water">питьевая вода</label>
+                </li>
+                <li class="additionally__item">
+                  <input class="additionally__input visually-hidden" name="checkbox-milk" id="checkbox-milk" type="checkbox">
+                  <label class="additionally__label select-program-label" for="checkbox-milk">молоко</label>
+                </li>
+                <li class="additionally__item">
+                  <input class="additionally__input visually-hidden" name="checkbox-vitamins" id="checkbox-vitamins" type="checkbox">
+                  <label class="additionally__label select-program-label" for="checkbox-vitamins">витамины</label>
+                </li>
+              </ul>
+            </div>
             <hr class="additionally__hr additionally__hr--after">
-            <ul class="additionally__list">
-              <li class="additionally__item">
-                <input class="additionally__input visually-hidden" name="checkbox-sweetener" id="checkbox-sweetener" type="checkbox" checked>
-                <label class="additionally__label select-program-label" for="checkbox-sweetener">сахарозаменитель</label>
-              </li>
-              <li class="additionally__item">
-                <input class="additionally__input visually-hidden" name="checkbox-drinking-water" id="checkbox-drinking-water" type="checkbox">
-                <label class="additionally__label select-program-label" for="checkbox-drinking-water">питьевая вода</label>
-              </li>
-              <li class="additionally__item">
-                <input class="additionally__input visually-hidden" name="checkbox-milk" id="checkbox-milk" type="checkbox">
-                <label class="additionally__label select-program-label" for="checkbox-milk">молоко</label>
-              </li>
-              <li class="additionally__item">
-                <input class="additionally__input visually-hidden" name="checkbox-vitamins" id="checkbox-vitamins" type="checkbox">
-                <label class="additionally__label select-program-label" for="checkbox-vitamins">витамины</label>
-              </li>
-            </ul>
           </fieldset>
-          <button class="questionnaire__button" type="submit">отправить заявку</button>
-          <p class="questionnaire__description">* — Обязательные поля</p>
+          <div class="questionnaire__footer">
+            <button class="questionnaire__button" type="submit">отправить заявку</button>
+            <p class="questionnaire__description">* — Обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
-    <div class="contacts contacts--index">
+    <div class="contacts contacts--form">
       <div class="contacts__info">
         <b class="contacts__title">приглашаем <br>
           к сотрудничеству дилеров!</b>
@@ -153,7 +171,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper wrapper--with-padd">
         <a href="index.html" class="logo page-footer__logo">
-          <svg class="logo-text" height="24" width="128">
+          <svg class="logo-text" height="24" width="128" aria-label="Логотип 'CAT ENERGY">
             <use href="img/sprite.svg#logo-text"></use>
           </svg>
         </a>
@@ -185,7 +203,7 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/22">
             <p class="copyright__text">HTML Academy</p>
-            <svg class="copyright__img" width="27" height="34" xmlns="http://www.w3.org/2000/svg">
+            <svg class="copyright__img" width="27" height="34" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип 'HTML Academy'">
               <use href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>

@@ -2,17 +2,41 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 0;
+  }
+}
+
+.additional-prod__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 320px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 23px;
 
   @media (min-width: 768px) {
     padding-top: 25px;
-    padding-left: 0;
     margin-bottom: 41px;
+    max-width: 768px;
   }
 
   @media (min-width: 1440px) {
     margin-bottom: 86px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -40,7 +64,6 @@
 }
 
 .additional-prod__hr {
-  width: 10px;
   margin: 0;
   flex-grow: 1;
   height: 2px;
@@ -58,15 +81,40 @@
 }
 
 .additional-prod__hr--before {
+  background-color: transparent;
+
+  @media (min-width: 768px) {
+    background-color: #68b738;
+    margin-top: 46px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 48px;
+  }
+}
+
+.additional-prod__hr--after {
+  margin-top: 39px;
+
+  @media (min-width: 768px) {
+    margin-top: 46px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: 48px;
+  }
+}
+
+.additional-prod__hr-h2--before {
   display: none;
 
   @media (min-width: 768px) {
-    display: block;
+    display: inline-block;
     max-width: 30px;
   }
 
   @media (min-width: 1440px) {
-    max-width: 70px;
+    max-width: 62px;
   }
 }
 
@@ -78,19 +126,17 @@
   padding-left: 20px;
 
   @media (min-width: 768px) {
-    padding-left: 30px;
-    padding-right: 30px;
-    width: 100%;
-    margin: 0;
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
   }
 
   @media (min-width: 1440px) {
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
-    padding-left: 0;
-    padding-right: 0;
-    width: calc(100% - 110px);
+    max-width: 1220px;
   }
 }
 
@@ -101,16 +147,22 @@
   margin: 0;
   padding: 0;
   width: 100%;
+  max-width: 280px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: 768px) {
     padding-right: 0;
+    max-width: 708px;
   }
 
   @media (min-width: 1440px) {
+    max-width: none;
     width: 896px;
-    margin-left: 112px;
-    padding-right: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: 2px;
   }
 }
 

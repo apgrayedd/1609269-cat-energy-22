@@ -15,13 +15,13 @@
         <div class="page-header__site-nav ">
           <a class="page-header__link page-header__link--logo-mobile logo">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" height="60" width="202">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" height="52" width="174">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
               <img class="logo__logo" src="img/logo-mobile.svg" alt="Логотип 'CAT ENERGY'" height="37" width="33">
             </picture>
           </a>
           <a class="page-header__link page-header__link--logo-text logo">
-            <svg width="101" height="18">
+            <svg width="101" height="18" aria-label="Логотип 'CAT ENERGY">
               <use href="img/sprite.svg#logo-text"></use>
             </svg>
           </a>
@@ -52,16 +52,16 @@
           <h2>Функциональное питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
           <picture>
-            <source media="(min-width: 1440px)" type="image/webp" srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x" height="499" width="552">
-            <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x" height="609" width="709">
-            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x" height="499" width="552">
-            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x" height="609" width="709">
-            <img class="promo__img" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" alt="" height="270" width="280">
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+            <img class="promo__img" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" alt="">
           </picture>
           <a href="form.html" class="promo__button">подобрать программу</a>
         </div>
       </section>
-      <section class="program wrapper--padd">
+      <section class="program">
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="program__list">
           <li class="program__item program__item--slim">
@@ -129,15 +129,15 @@
           <div class="example__slider">
             <div class="example_slide">
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/example-before-desktop.webp 1x, img/example-before-desktop@2x.webp 2x" height="520" width="545">
-                <source type="image/webp" srcset="img/example-before-mobile.webp 1x, img/example-before-mobile@2x.webp 2x" height="240" width="251">
-                <source media="(min-width: 768px)" srcset="img/example-before-desktop.png 1x, img/example-before-desktop@2x.png 2x" height="520" width="677">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/example-before-desktop.webp 1x, img/example-before-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/example-before-mobile.webp 1x, img/example-before-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/example-before-desktop.png 1x, img/example-before-desktop@2x.png 2x">
                 <img class="example__img-mobile example__img-mobile--before" src="img/example-before-mobile.png" srcset="img/example-before-mobile@2x.png 2x" alt="Кот до курса CAT ENERGY" loading="lazy" height="232" width="311">
               </picture>
               <picture>
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/example-after-desktop.webp 1x, img/example-after-desktop@2x.webp 2x" height="520" width="545">
-                <source type="image/webp" srcset="img/example-after-mobile.webp 1x, img/example-after-mobile@2x.webp 2x" height="240" width="251">
-                <source media="(min-width: 768px)" srcset="img/example-after-desktop.png 1x, img/example-after-desktop@2x.png 2x" height="520" width="545">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/example-after-desktop.webp 1x, img/example-after-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/example-after-mobile.webp 1x, img/example-after-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/example-after-desktop.png 1x, img/example-after-desktop@2x.png 2x">
                 <img class="example__img-mobile example__img-mobile--after" src="img/example-after-mobile.png" srcset="img/example-after-mobile@2x.png 2x" alt="Кот после курса CAT ENERGY" loading="lazy" height="240" width="251">
               </picture>
             </div>
@@ -171,7 +171,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper page-footer__wrapper--index">
         <a href="#" class="logo page-footer__logo">
-          <svg class="logo-text" height="24" width="128">
+          <svg class="logo-text" height="24" width="128" aria-label="Логотип 'CAT ENERGY">
             <use href="img/sprite.svg#logo-text"></use>
           </svg>
         </a>
@@ -203,7 +203,7 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/22">
             <p class="copyright__text">HTML Academy</p>
-            <svg class="copyright__img" width="27" height="34" xmlns="http://www.w3.org/2000/svg">
+            <svg class="copyright__img" width="27" height="34" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип 'HTML Academy'">
               <use href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
