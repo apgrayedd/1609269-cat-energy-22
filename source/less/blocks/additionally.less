@@ -175,6 +175,12 @@
   }
 }
 
+.additionally__input:focus + label {
+  &::before {
+    border: 1px solid #222222;
+  }
+}
+
 .additionally__input:disabled + label {
   opacity: 0.3;
 }

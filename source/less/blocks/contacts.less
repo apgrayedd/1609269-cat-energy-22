@@ -188,33 +188,33 @@
 .contacts__map {
   padding: 0;
   height: 362px;
-  background-image: url("../img/background-map-mobile.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/background-map-mobile@2x.png");
-  }
 
   @media (min-width: 768px) {
     height: 400px;
-    background-image: url("../img/background-map-tablet.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-map-tablet@2x.png");
-    }
-  }
-
-  @media (min-width: 1440px) {
-    background-image: url("../img/background-map-desktop.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background-map-desktop@2x.png");
-    }
   }
 }
 
 .contacts__map iframe {
   border: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.contacts__map img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+
+  @media (min-width: 768px) {
+    height: 396px;
+    width: 768px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 400px;
+    width: 1440px;
+  }
 }

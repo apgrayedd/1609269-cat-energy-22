@@ -11,7 +11,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper page-header__wrapper--index wrapper--padd">
+      <div class="page-header__wrapper page-header__wrapper--index">
         <div class="page-header__site-nav ">
           <a class="page-header__link page-header__link--logo-mobile logo">
             <picture>
@@ -29,7 +29,7 @@
             <button class="page-header__toogle" aria-label="Открыть меню"></button>
         </div>
         </div>
-        <nav class="page-header__nav main-nav main-nav--nojs wrapper">
+        <nav class="page-header__nav main-nav main-nav--nojs">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--index site-list__item--active">
               <a>Главная</a>
@@ -47,7 +47,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Магазин функционального питания для котов "CAT ENERGY"</h1>
       <section class="promo ">
-        <div class="promo__wrapper wrapper--padd">
+        <div class="promo__wrapper">
           <div class="promo__background"></div>
           <h2>Функциональное питание для котов</h2>
           <p class="promo__slogan">Занялся собой? Займись котом!</p>
@@ -78,7 +78,7 @@
           </li>
         </ul>
       </section>
-      <section class="special wrapper--padd">
+      <section class="special">
         <h2>Как это работает</h2>
         <ul class="special__list">
           <li class="special__item">
@@ -127,7 +127,7 @@
             <div class="example__expenses">Затраты на питание:<p> 15 000 РУБ.</p></div>
           </div>
           <div class="example__slider">
-            <div class="example_slide">
+            <div class="example__slider__slide">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/example-before-desktop.webp 1x, img/example-before-desktop@2x.webp 2x">
                 <source type="image/webp" srcset="img/example-before-mobile.webp 1x, img/example-before-mobile@2x.webp 2x">
@@ -165,7 +165,15 @@
         </div>
       </div>
       <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" height="100%" width="100%" allowfullscreen=""></iframe>
+        <picture>
+          <source media="(min-width: 1440px)" type="image/webp" srcset="img/background-map-desktop.webp 1x, img/background-map-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/background-map-tablet.webp 1x, img/background-map-tablet@2x.webp 2x">
+          <source srcset="img/background-map-mobile.webp 1x, img/background-map-mobile@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 1440x)" srcset="img/background-map-desktop.png 1x, img/background-map-desktop@2x.png 2x"/>
+          <source media="(min-width: 768px)" srcset="img/background-map-tablet.png 1x, img/background-map-tablet@2x.png 2x"/>
+          <img src="img/background-map-mobile.png" srcset="img/background-map-mobile@2x.png 2x" alt="" loading="lazy" width="320" height="362">
+        </picture>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" allowfullscreen=""></iframe>
       </div>
     </div>
     <footer class="page-footer">

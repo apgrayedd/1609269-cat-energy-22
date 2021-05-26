@@ -11,7 +11,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper wrapper--padd">
+      <div class="page-header__wrapper">
         <div class="page-header__site-nav">
           <a class="page-header__link page-header__link--logo-mobile logo" href="index.html">
             <picture>
@@ -29,7 +29,7 @@
             <button class="page-header__toogle" aria-label="Открыть меню"></button>
         </div>
         </div>
-        <nav class="page-header__nav main-nav main-nav--nojs wrapper">
+        <nav class="page-header__nav main-nav main-nav--nojs">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--form">
               <a href="index.html">Главная</a>
@@ -51,20 +51,20 @@
       </div>
       <section class="questionnaire">
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="questionnaire__fieldset information  wrapper--form">
+          <fieldset class="questionnaire__fieldset information">
             <h2 class="visually-hidden">Информация о коте</h2>
             <ul class="information__list">
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-name">ИМЯ:<span class="information__span">*</span></label>
-                <input class="information__input select-program-input" name="name" id="input-name" type="text" value="БАРСИК" required>
+                <input class="information__input select-program-input" name="name" id="input-name" type="text" placeholder="БАРСИК" required>
               </li>
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-weight">Вес (кг):<span class="information__span">*</span></label>
-                <input class="information__input select-program-input" name="weight" id="input-weight" type="text" value="7" required>
+                <input class="information__input select-program-input" name="weight" id="input-weight" type="text" placeholder="7" required>
               </li>
               <li class="information__item">
                 <label class="information__label select-program-label" for="input-age">Возраст (лет):</label>
-                <input class="information__input select-program-input" name="age" id="input-age" type="text" value="7" required>
+                <input class="information__input select-program-input" name="age" id="input-age" type="text" placeholder="7" required>
               </li>
             </ul>
           </fieldset>
@@ -122,7 +122,7 @@
             </div>
             <hr class="comment__hr comment__hr--after">
           </fieldset>
-          <fieldset class="questionnaire__fieldset additionally wrapper">
+          <fieldset class="questionnaire__fieldset additionally">
             <hr class="additionally__hr additionally__hr--before">
             <div class="additionally__wrapper">
               <hr class="additionally__hr additionally__hr-h2 additionally__hr-h2--before">
@@ -165,11 +165,11 @@
           <span>Санкт-Петербург</span></p>
       </div>
       <div class="contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" height="100%" width="100%" allowfullscreen=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2s!4v1617369592025!5m2!1sru!2s" allowfullscreen=""></iframe>
       </div>
     </div>
     <footer class="page-footer">
-      <div class="page-footer__wrapper wrapper--with-padd">
+      <div class="page-footer__wrapper">
         <a href="index.html" class="logo page-footer__logo">
           <svg class="logo-text" height="24" width="128" aria-label="Логотип 'CAT ENERGY">
             <use href="img/sprite.svg#logo-text"></use>

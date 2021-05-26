@@ -107,6 +107,12 @@
   }
 }
 
+.program-form__input:focus + label {
+  &::before {
+    border: 1px solid #222222;
+  }
+}
+
 .program-form__input:disabled + label {
   opacity: 0.3;
 }
