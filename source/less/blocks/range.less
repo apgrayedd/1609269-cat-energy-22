@@ -34,13 +34,24 @@
     font-size: 20px;
     line-height: 30px;
     margin-right: 0;
+    margin-left: 0;
 
     &--before {
-      margin-right: 28px;
+      margin-right: 24px;
     }
 
     &--after {
-      margin-left: 19px;
+      margin-left: 19.5px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &--before {
+      margin-left: 3px;
+    }
+
+    &--after {
+      margin-left: 13px;
     }
   }
 }
@@ -91,13 +102,14 @@
   z-index: 3;
 
   @media (min-width: 768px) {
-    margin-left: 192px;
+    margin-left: 197px;
     height: 34px;
     width: 34px;
     border-radius: 50%;
     background: @white;
     border: 1px solid #cdcdcd;
     box-sizing: border-box;
+    margin-top: 1px;
 
     &:hover {
       border: 1px solid #68b738;
@@ -118,6 +130,6 @@
   }
 
   @media (min-width: 1440px) {
-    margin-left: 212px;
+    margin-left: 192px;
   }
 }

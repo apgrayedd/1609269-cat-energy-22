@@ -4,13 +4,28 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   padding: 0;
-  padding-left: 20px;
+  margin: 0;
   width: 100%;
+}
+
+.comment__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 320px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+
 
   @media (min-width: 768px) {
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 768px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 1440px;
   }
 }
 
@@ -20,28 +35,20 @@
   line-height: 26px;
   margin: 0;
   margin-bottom: 37px;
+  padding-left: 20px;
   width: 143px;
 
   @media (min-width: 768px) {
     width: auto;
     padding-left: 39px;
-    padding-right: 38px;
+    padding-right: 40px;
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 76px;
   }
-}
-
-.comment__hr--before {
-  display: none;
-
-  @media (min-width: 768px) {
-    display: inline-block;
-    max-width: 30px;
-  }
 
   @media (min-width: 1440px) {
-    max-width: 70px;
+    padding-right: 43px;
   }
 }
 
@@ -51,23 +58,56 @@
   height: 2px;
   background-color: #68b738;
   border: none;
-  margin-top: 18px;
+  margin-top: 16px;
+
+  @media (min-width: 768px) {
+    margin-top: 22px;
+  }
+}
+
+
+.comment__hr--before {
+  background-color: transparent;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    background-color: #68b738;
+  }
+}
+
+.comment__hr-h2--before {
+  display: none;
+
+  @media (min-width: 768px) {
+    max-width: 30px;
+    display: block;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 70px;
+  }
 }
 
 .comment__textarea {
   height: 150px;
   resize: none;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 14px 10px 15px;
+  width: 100%;
+  max-width: 280px;
   margin: 0;
-  margin-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
   color: @special-dark-grey;
 
   @media (min-width: 768px) {
     margin: 0 70px;
     height: 174px;
+    padding: 10px 19px 10px 19px;
+    max-width: 768px;
   }
 
   @media (min-width: 1440px) {
     margin: 0 110px;
+    max-width: 1220px;
   }
 }

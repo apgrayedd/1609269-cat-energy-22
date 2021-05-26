@@ -8,9 +8,19 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    max-width: 708px;
+    padding: 0;
+  }
 
   @media (min-width: 1440px) {
     grid-template-columns: 1fr 1fr;
+    max-width: 1220px;
+    padding: 0;
   }
 }
 
@@ -66,27 +76,44 @@
 
 
   &--slim {
+    margin-top: -1px;
+    margin-right: 20px;
+    margin-left: 1px;
+
     @media (min-width: 768px) {
       width: 200px;
       height: 211px;
+      margin-left: -18px;
+      margin-top: 3px;
+      margin-right: 0;
     }
 
     @media (min-width: 1440px) {
       width: 100px;
-      height: 106px;
+      height: 104px;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 62px;
     }
   }
 
   &--pro {
+    margin-left: -7px;
+    margin-top: 1px;
+    margin-right: 11px;
+
     @media (min-width: 768px) {
       width: 268px;
       height: 200px;
+      margin-left: -19px;
+      margin-top: 14px;
     }
 
     @media (min-width: 1440px) {
       width: 134px;
       height: 100px;
-      margin-left: -19px;
+      margin-top: 5px;
+      margin-right: 62px;
     }
   }
 }
@@ -124,9 +151,9 @@
   line-height: 18px;
   border-bottom: 1px solid #d9d9d9;
   margin: 0;
-  margin-top: 22px;
-  margin-bottom: 19px;
-  padding-bottom: 23px;
+  margin-top: 21px;
+  margin-bottom: 20px;
+  padding-bottom: 22px;
   color: @special-dark-grey;
   width: 100%;
 
@@ -136,7 +163,7 @@
     border: none;
     margin-top: 0;
     margin-bottom: 48px;
-    width: calc(100% - 268px);
+    width: calc(100% - 250px);
     padding: 0;
   }
 
@@ -147,6 +174,14 @@
   }
 }
 
+.program__br--768 {
+  display: none;
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    display: inline;
+  }
+}
+
 .program__link {
   position: relative;
   text-transform: uppercase;
@@ -154,6 +189,7 @@
   text-decoration: none;
   font-size: 16px;
   line-height: 16px;
+  margin-bottom: 4px;
 
   &::before {
     content: "";
@@ -179,6 +215,12 @@
     &::before {
       top: 9px;
       right: -49px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &::before {
+      right: -52px;
     }
   }
 }
